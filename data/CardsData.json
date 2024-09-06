@@ -1,0 +1,378 @@
+{
+    "scenarios": [
+        {
+            "name": {
+                "en": "Air, Land and Sea",
+                "es": "Aire, Tierra y Mar",
+                "zh-CN": "海陆空"
+            },
+            "type": "rock",
+            "animals": [
+                { "name": {
+                    "en": "Vulture",
+                    "es": "Buitre",
+                    "zh-CN": "秃鹫"
+                }, "type": "rock" },
+                { "name": {
+                    "en": "Wolf",
+                    "es": "Lobo",
+                    "zh-CN": "狼"
+                }, "type": "grass" },
+                { "name": {
+                    "en": "Fish",
+                    "es": "Pez",
+                    "zh-CN": "鱼"
+                }, "type": "water" }
+            ],
+            "map": 0
+        },
+        {
+            "name": {
+                "en": "Wingspan",
+                "es": "Wingspan",
+                "zh-CN": "翼展"
+            },
+            "type": "constru",
+            "animals": [
+                { "name": {
+                    "en": "Raven",
+                    "es": "Cuervo",
+                    "zh-CN": "渡鸦"
+                }, "type": "land" },
+                { "name": {
+                    "en": "Duck",
+                    "es": "Pato",
+                    "zh-CN": "鸭子"
+                }, "type": "water" },
+                { "name": {
+                    "en": "Peacock",
+                    "es": "Pavo Real",
+                    "zh-CN": "孔雀"
+                }, "type": "constru" }
+            ],
+            "map": 1
+        },
+        {
+            "name": {
+                "en": "Up in the Trees",
+                "es": "Arriba en los arboles",
+                "zh-CN": "树梢之上"
+            },
+            "type": "grass",
+            "animals": [
+                { "name": {
+                    "en": "Koala",
+                    "es": "Koala",
+                    "zh-CN": "考拉"
+                }, "type": "grass" },
+                { "name": {
+                    "en": "Panther",
+                    "es": "Pantera",
+                    "zh-CN": "黑豹"
+                }, "type": "land" },
+                { "name": {
+                    "en": "Snow Fox",
+                    "es": "Zorro de nieve",
+                    "zh-CN": "雪狐"
+                }, "type": "land" }
+            ],
+            "map": 0
+        },
+        {
+            "name": {
+                "en": "Mixed Bag",
+                "es": "Bolsa Mixta",
+                "zh-CN": "混合牌"
+            },
+            "type": "constru",
+            "animals": [
+                { "name": {
+                    "en": "Alpaca",
+                    "es": "Alpaca",
+                    "zh-CN": "羊驼"
+                }, "type": "land" },
+                { "name": {
+                    "en": "Bat",
+                    "es": "Murcielago",
+                    "zh-CN": "蝙蝠"
+                }, "type": "rock" },
+                { "name": {
+                    "en": "Squirrel",
+                    "es": "Ardilla",
+                    "zh-CN": "松鼠"
+                }, "type": "constru" }
+            ],
+            "map": 1
+        },
+        {
+            "name": {
+                "en": "The Sky is the Limit",
+                "es": "El Cielo es el Limite",
+                "zh-CN": "天空极限"
+            },
+            "type": "water",
+            "animals": [],
+            "map": 0
+        },
+        {
+            "name": {
+                "en": "Welcome to the Jungle",
+                "es": "Bienvenido a la Jungla",
+                "zh-CN": "欢迎来到丛林"
+            },
+            "type": "grass",
+            "animals": [
+                { "name": {
+                    "en": "Dragonfly",
+                    "es": "Libelula",
+                    "zh-CN": "蜻蜓"
+                }, "type": "water" },
+                { "name": {
+                    "en": "Parrot",
+                    "es": "Loro",
+                    "zh-CN": "鹦鹉"
+                }, "type": "grass" },
+                { "name": {
+                    "en": "Frog",
+                    "es": "Rana",
+                    "zh-CN": "青蛙"
+                }, "type": "water" }
+            ],
+            "map": 1
+        },
+        {
+            "name": {
+                "en": "Calm Mountains",
+                "es": "Montes Tranquilos",
+                "zh-CN": "宁静山脉"
+            },
+            "type": "rock",
+            "animals": [
+                { "name": {
+                    "en": "Capricorn",
+                    "es": "Capricornio",
+                    "zh-CN": "摩羯座"
+                }, "type": "rock" },
+                { "name": {
+                    "en": "Baboon",
+                    "es": "Babuino",
+                    "zh-CN": "狒狒"
+                }, "type": "rock" },
+                { "name": {
+                    "en": "Bear",
+                    "es": "Oso",
+                    "zh-CN": "熊"
+                }, "type": "grass" }
+            ],
+            "map": 0
+        },
+        {
+            "name": {
+                "en": "Islands in the Sun",
+                "es": "Islas en el Sol",
+                "zh-CN": "阳光岛屿"
+            },
+            "type": "water",
+            "animals": [
+                { "name": {
+                    "en": "Butterfly",
+                    "es": "Mariposa",
+                    "zh-CN": "蝴蝶"
+                }, "type": "land" },
+                { "name": {
+                    "en": "Racoon",
+                    "es": "Mapache",
+                    "zh-CN": "浣熊"
+                }, "type": "land" },
+                { "name": {
+                    "en": "Flamingo",
+                    "es": "Flamenco",
+                    "zh-CN": "火烈鸟"
+                }, "type": "water" }
+            ],
+            "map": 1
+        },
+        {
+            "name": {
+                "en": "Town in the Woods",
+                "es": "Ciudad en el Bosque",
+                "zh-CN": "林中城镇"
+            },
+            "type": "grass",
+            "animals": [
+                { "name": {
+                    "en": "Cat",
+                    "es": "Gato",
+                    "zh-CN": "猫"
+                }, "type": "constru" },
+                { "name": {
+                    "en": "Hedgehog",
+                    "es": "Erizo",
+                    "zh-CN": "刺猬"
+                }, "type": "constru" },
+                { "name": {
+                    "en": "Boar",
+                    "es": "Jabali",
+                    "zh-CN": "野猪"
+                }, "type": "grass" }
+            ],
+            "map": 0
+        },
+        {
+            "name": {
+                "en": "Lush Green",
+                "es": "Verde Exhuberante",
+                "zh-CN": "郁郁葱葱"
+            },
+            "type": "grass",
+            "animals": [
+                { "name": {
+                    "en": "Owl",
+                    "es": "Buho",
+                    "zh-CN": "猫头鹰"
+                }, "type": "grass" },
+                { "name": {
+                    "en": "Rabbit",
+                    "es": "Liebre",
+                    "zh-CN": "兔子"
+                }, "type": "grass" },
+                { "name": {
+                    "en": "Otter",
+                    "es": "Nutria",
+                    "zh-CN": "水獭"
+                }, "type": "water" }
+            ],
+            "map": 1
+        },
+        {
+            "name": {
+                "en": "Hiding in the Rubble",
+                "es": "Escondido entre los Escombros",
+                "zh-CN": "藏身瓦砾"
+            },
+            "type": "rock",
+            "animals": [
+                { "name": {
+                    "en": "Marmot",
+                    "es": "Marmota",
+                    "zh-CN": "土拨鼠"
+                }, "type": "rock" },
+                { "name": {
+                    "en": "Desert Fox",
+                    "es": "Zorro fennec",
+                    "zh-CN": "沙漠狐"
+                }, "type": "rock" },
+                { "name": {
+                    "en": "Meerkat",
+                    "es": "Suricata",
+                    "zh-CN": "猫鼬"
+                }, "type": "rock" }
+            ],
+            "map": 0
+        },
+        {
+            "name": {
+                "en": "Fields of Gold",
+                "es": "Campos de Oro",
+                "zh-CN": "金色田野"
+            },
+            "type": "grass",
+            "animals": [
+                { "name": {
+                    "en": "Lion",
+                    "es": "Leon",
+                    "zh-CN": "狮子"
+                }, "type": "land" },
+                { "name": {
+                    "en": "Bumblebee",
+                    "es": "Abejorro",
+                    "zh-CN": "熊蜂"
+                }, "type": "grass" },
+                { "name": {
+                    "en": "Ladybug",
+                    "es": "Mariquita",
+                    "zh-CN": "瓢虫"
+                }, "type": "land" }
+            ],
+            "map": 1
+        },
+        {
+            "name": {
+                "en": "Alternative Reality Amazonas",
+                "es": "Amazonas Realidad Alterna",
+                "zh-CN": "亚马逊奇幻之旅"
+            },
+            "type": "water",
+            "animals": [
+                { "name": {
+                    "en": "Deer",
+                    "es": "Ciervo",
+                    "zh-CN": "鹿"
+                }, "type": "grass" },
+                { "name": {
+                    "en": "Crocodile",
+                    "es": "Cocodrilo",
+                    "zh-CN": "鳄鱼"
+                }, "type": "water" },
+                { "name": {
+                    "en": "Kingfisher",
+                    "es": "Martinpescador",
+                    "zh-CN": "翠鸟"
+                }, "type": "grass" }
+            ],
+            "map": 0
+        },
+        {
+            "name": {
+                "en": "Splish Splash Water-home",
+                "es": "Chapoteo en el Hogar de Agua",
+                "zh-CN": "水花四溅的水之家"
+            },
+            "type": "rock",
+            "animals": [
+                { "name": {
+                    "en": "Tortoise",
+                    "es": "Tortuga",
+                    "zh-CN": "乌龟"
+                }, "type": "water" },
+                { "name": {
+                    "en": "Ray",
+                    "es": "Manta raya",
+                    "zh-CN": "鳐鱼"
+                }, "type": "water" },
+                { "name": {
+                    "en": "Penguin",
+                    "es": "Pingüino",
+                    "zh-CN": "企鹅"
+                }, "type": "rock" }
+            ],
+            "map": 1
+        },
+        {
+            "name": {
+                "en": "Dorfromantik",
+                "es": "Dorfromantik",
+                "zh-CN": "恬静庄园"
+            },
+            "type": "constru",
+            "animals": [
+                { "name": {
+                    "en": "Stork",
+                    "es": "Cigüena",
+                    "zh-CN": "鹳"
+                }, "type": "constru" },
+                { "name": {
+                    "en": "Mouse",
+                    "es": "Raton",
+                    "zh-CN": "老鼠"
+                }, "type": "constru" },
+                { "name": {
+                    "en": "Lizard",
+                    "es": "Lagarto",
+                    "zh-CN": "蜥蜴"
+                }, "type": "constru" }
+            ],
+            "map": 0
+        }
+    ]
+}
