@@ -122,7 +122,7 @@ export default function Carousel({ navigation }: any) {
                                 }>
                                     
                                     <Card scenario={scenario as unknown as IScenario} index={index} callback={updateCurrentMedals} />
-                                    <ScenarioNumber number={index + 1} />
+                                    {/* <ScenarioNumber number={index + 1} /> */}
                                 </View>
                             );
                         })}
