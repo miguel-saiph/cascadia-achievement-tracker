@@ -22,10 +22,9 @@ import { MedalsCount } from '@/components/main/MedalsCount';
 import { ScenarioNumber } from '@/components/main/ScenarioNumber';
 
 export interface IScenario {
-    name: { [lang: string]: string },
-    type: string,
-    animals: IAnimalInfo[],
-    map: number
+    cards: string[],
+    score: number,
+    extra: string[]
 }
 
 export default function Carousel({ navigation }: any) {

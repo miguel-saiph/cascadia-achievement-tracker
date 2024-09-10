@@ -15,6 +15,7 @@ import { ILoc } from "./Info";
 import { useTaskContext } from "@/hooks/configContext";
 import { Trash } from "./Trash";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import { Ribbon } from "./Ribbon";
 // Checkbox documentation
 // https://github.com/WrathChaos/react-native-bouncy-checkbox
 
@@ -25,15 +26,6 @@ const animalsSourceMap: ImageSourcePropType[] = [
     require("@/assets/images/animals/hawk.png"),
     require("@/assets/images/animals/fox.png"),
 ]
-
-const nameColorMap: { [key: string]: string } = {
-    ['rock']: "#7d7f7f",
-    ['land']: "#d19f19",
-    ['water']: "#2e7e8a",
-    ['grass']: "#87992e",
-    ['constru']: "#ba2a4b",
-    ['extra']: "#c2641f"
-}
 
 export default function Card({ scenario, index, callback }: { scenario: IScenario, index: number, callback: Function }) {
     const [modalVisible, setModalVisible] = useState(false);
@@ -73,7 +65,8 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
         }>
             <View style={styles.tabContainer} >
                 <View style={[styles.tab, styles.tabLeft]}>
-                    <ThemedText style={styles.tabText}>12.</ThemedText>
+                    <ThemedText style={styles.tabText}> {index + 1}. </ThemedText>
+                    <Ribbon content={scenario.score.toString()}/>
                 </View>
                 <View style={[styles.tab, styles.tabRight]}>
                     <BouncyCheckbox
@@ -96,13 +89,13 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                     flexDirection: 'row',
                     margin: 12
                 }}>
-                    {animalsSourceMap.map((source, index) => {
+                    {scenario.cards.map((card, index) => {
                         return (
                             <View style={styles.animalContainer} key={index}>
-                                <Image source={source} style={styles.animalImage} />
+                                <Image source={animalsSourceMap[index]} style={styles.animalImage} />
                                 <View style={styles.animalLetterTab}>
                                     <ThemedText style={styles.animalLetterTabText}> 
-                                        A
+                                        { card }
                                     </ThemedText>
                                 </View>
                                 
@@ -165,9 +158,11 @@ const styles = StyleSheet.create({
     tab: {
         backgroundColor: '#3a180d',
         width: 'auto',
-        height: 42,
+        height: 45,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
+        display: 'flex',
+        flexDirection: 'row',
     },
     tabLeft: {
         alignSelf: 'flex-start',
@@ -206,7 +201,7 @@ const styles = StyleSheet.create({
     },
     animalLetterTabText: {
         fontFamily: 'LocalBrewery',
-        fontSize: 30,
+        fontSize: 28,
         lineHeight: 30,
         margin: 10,
         marginTop: 30,
