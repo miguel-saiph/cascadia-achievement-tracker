@@ -14,7 +14,7 @@ export function MedalsCount({ current }: { current: number }) {
                     }} />
                     <ThemedText style={{
                         fontSize: 20,
-                        fontFamily: 'VixarASCI',
+                        fontFamily: 'LocalBrewery',
                         color: "black",
                     }}>{current} / {DataManager.instance.getTotalGoldMedals()} </ThemedText>
                 </View>

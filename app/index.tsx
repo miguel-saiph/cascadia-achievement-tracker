@@ -24,7 +24,9 @@ const Stack = createNativeStackNavigator();
 
 export default function Index() {
     const [loaded] = useFonts({
-        VixarASCI: require('../assets/fonts/Vixar ASCI Regular.ttf'),
+        LocalBrewery: require('../assets/fonts/local-brewery-four.ttf'),
+        Volkoba: require('../assets/fonts/mudkty-wtvolkolaksanstext-black.ttf'),
+        Mackinac: require('../assets/fonts/P22MackinacProMedium.otf'),
     });
 
     useEffect(() => {

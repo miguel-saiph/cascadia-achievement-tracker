@@ -27,7 +27,7 @@ export function HighScore({value}: {value: number}) {
 const styles = StyleSheet.create({
     text: {
         // marginTop: -6,
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         fontSize: 30,
         color: '#000',
         // paddingTop: 25,

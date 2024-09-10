@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     text: {
         marginBottom: 5,
         fontSize: 20,
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         color: "black",
         textAlign: 'left',
         marginHorizontal: 10

@@ -51,7 +51,7 @@ export function Credits() {
 
 const styles = StyleSheet.create({
     text: {
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         fontSize: 30,
         color: '#000',
         paddingTop: 5,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     modalText: {
         marginBottom: 5,
         fontSize: 20,
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         color: "black",
         textAlign: 'left'
     },

@@ -73,15 +73,15 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
         }>
             <View style={styles.tabContainer} >
                 <View style={[styles.tab, styles.tabLeft]}>
-                    <ThemedText style={styles.tabText}>10.</ThemedText>
+                    <ThemedText style={styles.tabText}>12.</ThemedText>
                 </View>
                 <View style={[styles.tab, styles.tabRight]}>
                     <BouncyCheckbox
                         style={styles.tabCheckbox}
                         size={25}
-                        fillColor="green"
+                        fillColor="#408c80"
                         unFillColor="#FFFFFF"
-                        iconStyle={{ borderColor: "green" }}
+                        iconStyle={{ borderColor: "#408c80" }}
                         innerIconStyle={{ borderWidth: 3 }}
                         disableText={true}
                         onPress={(isChecked: boolean) => { console.log(isChecked) }}
@@ -90,16 +90,6 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
             </View>
 
             <View style={styles.content}>
-                {/* <ThemedText adjustsFontSizeToFit={true} numberOfLines={1} style={{
-                    fontFamily: 'VixarASCI',
-                    fontSize: 35,
-                    color: nameColorMap[scenario.type],
-                    paddingTop: 25,
-                    maxWidth: 260,
-                    minHeight: 50
-                }}>
-                    {scenario.name[lang]}
-                </ThemedText> */}
 
                 <View style={{
                     display: 'flex',
@@ -112,7 +102,7 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                                 <Image source={source} style={styles.animalImage} />
                                 <View style={styles.animalLetterTab}>
                                     <ThemedText style={styles.animalLetterTabText}> 
-                                        C
+                                        A
                                     </ThemedText>
                                 </View>
                                 
@@ -120,9 +110,6 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                         );
                     })}
                 </View>
-
-                {/* <CardNames animals={scenario.animals} mapType={scenario.map === 0 ? MapType.A : MapType.B}>
-                </CardNames> */}
                 
                 <View style={{
                     display: 'flex',
@@ -130,7 +117,9 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                     marginTop: 10,
                     marginBottom: 10
                 }}>
-                    <ThemedText>
+                    <ThemedText style={{
+                        fontFamily: 'Mackinac',
+                    }}>
                         New content Soon
                     </ThemedText>
                 </View>
@@ -176,7 +165,7 @@ const styles = StyleSheet.create({
     tab: {
         backgroundColor: '#3a180d',
         width: 'auto',
-        height: 40,
+        height: 42,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
     },
@@ -189,8 +178,9 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
     },
     tabText: {
+        fontFamily: 'Volkoba',
         color: '#fff',
-        fontSize: 25,
+        fontSize: 20,
         textAlign: 'center',
         margin: 10
     },
@@ -215,11 +205,13 @@ const styles = StyleSheet.create({
         zIndex: -10 
     },
     animalLetterTabText: {
+        fontFamily: 'LocalBrewery',
+        fontSize: 30,
+        lineHeight: 30,
         margin: 10,
-        marginTop: 27,
+        marginTop: 30,
         color: '#ac9c79',
-        textAlign: 'center',
-        fontSize: 25
+        textAlign: 'center'
     },
     appButtonContainer: {
         backgroundColor: "#009688",
@@ -228,13 +220,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         marginBottom: 50,
         maxWidth: 80
-    },
-    appButtonText: {
-        fontFamily: 'VixarASCI',
-        fontSize: 24,
-        color: "#fff",
-        alignSelf: "center",
-        textTransform: "uppercase"
     },
     buttonOpen: {
         backgroundColor: '#F194FF',
@@ -250,7 +235,7 @@ const styles = StyleSheet.create({
     modalText: {
         marginBottom: 10,
         fontSize: 25,
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         textAlign: 'center',
         color: "black",
     },

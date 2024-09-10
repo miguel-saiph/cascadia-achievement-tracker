@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     modalText: {
         // marginBottom: 2,
         fontSize: 34,
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         color: "black",
         textAlign: 'center'
     },
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     appButtonText: {
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         fontSize: 24,
         color: "#fff",
         alignSelf: "center",

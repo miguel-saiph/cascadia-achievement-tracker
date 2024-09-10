@@ -179,7 +179,7 @@ export function Calculator({ onScoreSubmitted, updateScore }: { onScoreSubmitted
 
 const styles = StyleSheet.create({
     text: {
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         fontSize: 30,
         color: '#000',
         paddingTop: 5,
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     },
     modalText: {
         fontSize: 20,
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         color: "black",
         paddingTop: 5,
         marginLeft: 10,
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     appButtonText: {
-        fontFamily: 'VixarASCI',
+        fontFamily: 'LocalBrewery',
         fontSize: 24,
         color: "#fff",
         alignSelf: "center",

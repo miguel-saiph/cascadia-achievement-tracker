@@ -84,16 +84,16 @@ export function Info() {
 
 const styles = StyleSheet.create({
     text: {
-        fontFamily: 'VixarASCI',
-        fontSize: 30,
+        fontFamily: 'Mackinac',
+        fontSize: 20,
         color: '#000',
         paddingTop: 5,
         marginLeft: 5,
     },
     modalText: {
         marginBottom: 2,
-        fontSize: 20,
-        fontFamily: 'VixarASCI',
+        fontSize: 12,
+        fontFamily: 'Mackinac',
         color: "black",
         textAlign: 'left'
     },
