@@ -1,0 +1,182 @@
+{
+    "scenarios": [
+        {
+            "cards": ["A", "A", "A", "A", "A"],
+            "score": 80,
+            "extra": []
+        },
+        {
+            "cards": ["B", "B", "B", "B", "B"],
+            "score": 80,
+            "extra": []
+        },
+        {
+            "cards": ["C", "C", "C", "C", "C"],
+            "score": 80,
+            "extra": []
+        },
+        {
+            "cards": ["D", "D", "D", "D", "D"],
+            "score": 85,
+            "extra": []
+        },
+        {
+            "cards": ["C", "D", "B", "B", "B"],
+            "score": 85,
+            "extra": [
+                {
+                    "en": "Fully score :fox: 3 times",
+                    "es": "Puntúa :fox: completamente 3 veces"
+                }
+            ]
+        },
+        {
+            "cards": ["D", "B", "C", "C", "B"],
+            "score": 85,
+            "extra": [
+                {
+                    "en": "Play at least 4 of every animal",
+                    "es": "Juega por lo menos 4 de cada animal"
+                }
+            ]
+        },
+        {
+            "cards": ["B", "C", "C", "D", "C"],
+            "score": 90,
+            "extra": [
+                {
+                    "en": "Score at least 20 points in :hawk:",
+                    "es": "Obtén por lo menos 20 puntos en :hawk:"
+                }
+            ]
+        },
+        {
+            "cards": ["C", "B", "B", "A", "D"],
+            "score": 90,
+            "extra": [
+                {
+                    "en": "Score at least 5 points in :nature:",
+                    "es": "Obtén por lo menos 5 puntos en :nature:"
+                },
+                {
+                    "en": "Don't place a :bear: next to an :elk:",
+                    "es": "No pongas un :bear: adyacente a un :elk:"
+                }
+            ]
+        },
+        {
+            "cards": ["C", "A", "D", "C", "B"],
+            "score": 90,
+            "extra": [
+                {
+                    "en": "Score at least 10 in every animal",
+                    "es": "Obtén por lo menos 10 puntos en cada animal"
+                },
+                {
+                    "en": "Score at least 5 in every habitat",
+                    "es": "Obtén por lo menos 5 puntos en cada hábitat"
+                }
+            ]
+        },
+        {
+            "cards": ["C", "B", "D", "B", "B"],
+            "score": 95,
+            "extra": [
+                {
+                    "en": "Score at least 60 in wild life (W)",
+                    "es": "Obtén por lo menos 60 puntos en vida salvaje (W)"
+                },
+                {
+                    "en": "Score at least 7 points in 3 different habitats",
+                    "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
+                }
+            ]
+        },
+        {
+            "cards": ["B", "A", "A", "C", "A"],
+            "score": 95,
+            "extra": [
+                {
+                    "en": "Score at least 30 points in :bear:",
+                    "es": "Obtén por lo menos 30 puntos en :bear:"
+                },
+                {
+                    "en": "Don't play a forest next to a lake",
+                    "es": "No juegues un bosque adyacente a un lago"
+                }
+            ]
+        },
+        {
+            "cards": ["A", "B", "A", "A", "C"],
+            "score": 95,
+            "extra": [
+                {
+                    "en": "Fully score 1 :salmon:",
+                    "es": "Puntúa :salmon: completamente 1 vez"
+                },
+                {
+                    "en": "Don't play an :elk: in a forest",
+                    "es": "No juegues un :elk: en un bosque"
+                },
+                {
+                    "en": "Score at least 12 in 1 habitat",
+                    "es": "Obtén por lo menos 12 puntos en 1 hábitat"
+                }
+            ]
+        },
+        {
+            "cards": ["D", "C", "C", "B", "C"],
+            "score": 100,
+            "extra": [
+                {
+                    "en": "Fully score 1 :elk:",
+                    "es": "Puntúa :elk: completamente 1 vez"
+                },
+                {
+                    "en": "Play at least 5 :hawk:",
+                    "es": "Juega por lo menos 5 :hawk:"
+                },
+                {
+                    "en": ":hawk: must be played adyacent to :elk:",
+                    "es": ":hawk: debe jugarse adyacente a :elk:"
+                }
+            ]
+        },
+        {
+            "cards": ["A", "C", "B", "A", "D"],
+            "score": 100,
+            "extra": [
+                {
+                    "en": "Don't play a mountain next to a desert",
+                    "es": "No juegues una montaña adyacente a un desierto"
+                },
+                {
+                    "en": "Don't play a swamp next to a lake",
+                    "es": "No juegues un pantano adyacente a un lago"
+                },
+                {
+                    "en": "Score at least 35 in total in habitat (H)",
+                    "es": "Obtén por lo menos 35 puntos en total en hábitat (H)"
+                }
+            ]
+        },
+        {
+            "cards": ["A", "D", "A", "D", "A"],
+            "score": 100,
+            "extra": [
+                {
+                    "en": "Score at least 5 points in :nature:",
+                    "es": "Obtén por lo menos 5 puntos en :nature:"
+                },
+                {
+                    "en": "Score at least 7 points in 3 different habitats",
+                    "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
+                },
+                {
+                    "en": "Score at least 20 in 2 different animals",
+                    "es": "Obtén por lo menos 20 puntos en 2 animales distintos"
+                }
+            ]
+        }
+    ]
+}

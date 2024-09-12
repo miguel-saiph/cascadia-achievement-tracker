@@ -16,6 +16,7 @@ import { useTaskContext } from "@/hooks/configContext";
 import { Trash } from "./Trash";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { Ribbon } from "./Ribbon";
+import { TextWithIcons } from "./TextWithIcons";
 // Checkbox documentation
 // https://github.com/WrathChaos/react-native-bouncy-checkbox
 
@@ -66,7 +67,7 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
             <View style={styles.tabContainer} >
                 <View style={[styles.tab, styles.tabLeft]}>
                     <ThemedText style={styles.tabText}> {index + 1}. </ThemedText>
-                    <Ribbon content={scenario.score.toString()}/>
+                    <Ribbon content={scenario.score.toString()} />
                 </View>
                 <View style={[styles.tab, styles.tabRight]}>
                     <BouncyCheckbox
@@ -94,30 +95,31 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                             <View style={styles.animalContainer} key={index}>
                                 <Image source={animalsSourceMap[index]} style={styles.animalImage} />
                                 <View style={styles.animalLetterTab}>
-                                    <ThemedText style={styles.animalLetterTabText}> 
-                                        { card }
+                                    <ThemedText style={styles.animalLetterTabText}>
+                                        {card}
                                     </ThemedText>
                                 </View>
-                                
+
                             </View>
                         );
                     })}
                 </View>
-                
+
                 <View style={{
                     display: 'flex',
                     flexDirection: 'row',
                     marginTop: 10,
                     marginBottom: 10
                 }}>
-                    <ThemedText style={{
-                        fontFamily: 'Mackinac',
-                    }}>
-                        New content Soon
-                    </ThemedText>
+                    <View style={styles.extraContainer}>
+                        {scenario.extra.map((info, index) => {
+                            return (
+                                <TextWithIcons content={info[lang]} key={index} />
+                            );
+                        })}
+                    </View>
                 </View>
             </View>
-
         </View>
     );
 }
@@ -197,7 +199,7 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 8,
         borderBottomRightRadius: 8,
         marginTop: -20,
-        zIndex: -10 
+        zIndex: -10
     },
     animalLetterTabText: {
         fontFamily: 'LocalBrewery',
@@ -207,6 +209,15 @@ const styles = StyleSheet.create({
         marginTop: 30,
         color: '#ac9c79',
         textAlign: 'center'
+    },
+    extraContainer: {
+        margin: 2
+    },
+    extraText: {
+        fontFamily: 'Mackinac',
+        fontSize: 16,
+        color: '#000',
+        textAlign: 'left'
     },
     appButtonContainer: {
         backgroundColor: "#009688",

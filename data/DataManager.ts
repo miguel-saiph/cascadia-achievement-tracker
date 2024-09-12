@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import data from '@/data/CardsData.json';
+import data from '@/data/AchievementsData.json';
 
 export interface IStorageData {
     audio: boolean;

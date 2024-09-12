@@ -14,7 +14,7 @@ import {
     Platform
 } from 'react-native';
 
-import data from '@/data/CardsData.json';
+import data from '@/data/AchievementsData.json';
 import { IAnimalInfo } from '@/components/main/CardNames';
 import DataManager from '@/data/DataManager';
 import { Info } from '@/components/main/Info';
@@ -24,7 +24,9 @@ import { ScenarioNumber } from '@/components/main/ScenarioNumber';
 export interface IScenario {
     cards: string[],
     score: number,
-    extra: string[]
+    extra: {
+        [lang: string]: string
+    }[]
 }
 
 export default function Carousel({ navigation }: any) {
@@ -45,7 +47,7 @@ export default function Carousel({ navigation }: any) {
                 toValue: 0,
                 duration: 500,
                 useNativeDriver: false
-              }).start(({finished}) => {
+            }).start(({ finished }) => {
                 if (finished) {
                     setFullyLoaded(true);
                 }
@@ -74,8 +76,8 @@ export default function Carousel({ navigation }: any) {
                 flex: 1
             }}>
                 <View style={styles.topBarContainer}>
-                    <Info/>
-                    <MedalsCount current={currentMedals}/>
+                    <Info />
+                    <MedalsCount current={currentMedals} />
                 </View>
                 <View style={styles.scrollContainer}>
                     <ScrollView
@@ -88,38 +90,45 @@ export default function Carousel({ navigation }: any) {
                         //     }
                         // }
                         // showsHorizontalScrollIndicator={Platform.OS !== 'web' ? false : true}
-                        showsVerticalScrollIndicator={Platform.OS !== 'web' ? false : true}
+                        showsVerticalScrollIndicator={true}
                         // persistentScrollbar={Platform.OS !== 'web' ? false : true}
                         onScroll={
                             Animated.event([
-                            {
-                                nativeEvent: {
-                                    contentOffset: {
-                                        x: scrollX
-                                    }
+                                {
+                                    nativeEvent: {
+                                        contentOffset: {
+                                            x: scrollX
+                                        }
+                                    },
                                 },
-                            },
-                            ], { useNativeDriver: false,
+                            ], {
+                                useNativeDriver: false,
                                 listener: handleScroll
-                             })
+                            })
                         }
                         scrollEventThrottle={1}>
                         {data.scenarios.map((scenario, index) => {
                             return (
-                                <View style={{ width: windowWidth, height: 250 }} key={index}
-                                onLayout={
-                                    event => {
-                                        const layout = event.nativeEvent.layout;
-                                        xCoords[index] = layout.x;
-                                        if (index >= data.scenarios.length - 1) {
-                                            setLoaded(true);
+                                <View
+                                    style={{
+                                        width: windowWidth,
+                                        height: 'auto',
+                                        marginBottom: 15
+
+                                    }} key={index}
+                                    onLayout={
+                                        event => {
+                                            const layout = event.nativeEvent.layout;
+                                            xCoords[index] = layout.x;
+                                            if (index >= data.scenarios.length - 1) {
+                                                setLoaded(true);
+                                            }
                                         }
                                     }
-                                }
-                                onPointerEnterCapture={
-                                    () => { DataManager.instance.setLastScenario(index) }
-                                }>
-                                    
+                                    onPointerEnterCapture={
+                                        () => { DataManager.instance.setLastScenario(index) }
+                                    }>
+
                                     <Card scenario={scenario as unknown as IScenario} index={index} callback={updateCurrentMedals} />
                                     {/* <ScenarioNumber number={index + 1} /> */}
                                 </View>
@@ -136,7 +145,7 @@ export default function Carousel({ navigation }: any) {
                 position: 'absolute',
                 opacity: fadeAnim,
                 display: fullyLoaded ? 'none' : 'flex'
-            }}/>
+            }} />
         </SafeAreaView>
     );
 };
