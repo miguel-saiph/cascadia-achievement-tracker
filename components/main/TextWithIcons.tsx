@@ -17,16 +17,17 @@ export function TextWithIcons({ content }: { content: string }) {
         <View style={{ flexDirection: 'row' }}>
             <ThemedText>{'\u2022'} </ThemedText>
             {
-                content.split(/(:.*?:)/g).map(elem => {
+                content.split(/(:.*?:)/g).map((elem, index) => {
                     if (!elem) return null;
                     if (iconsMap[elem]) {
-                        return (<Image style={styles.icon} source={iconsMap[elem]} />);
+                        return (<Image style={styles.icon} source={iconsMap[elem]} key={index} />);
                     }
                     return (
                         <ThemedText
+                            key={index}
                             style={styles.text}
-                            // adjustsFontSizeToFit={true}
-                            // numberOfLines={1}
+                        // adjustsFontSizeToFit={true}
+                        // numberOfLines={1}
                         >
                             {elem}
                         </ThemedText>

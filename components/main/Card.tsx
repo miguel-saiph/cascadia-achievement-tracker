@@ -15,10 +15,11 @@ import { ILoc } from "./Info";
 import { useTaskContext } from "@/hooks/configContext";
 import { Trash } from "./Trash";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { Ribbon } from "./Ribbon";
-import { TextWithIcons } from "./TextWithIcons";
 // Checkbox documentation
 // https://github.com/WrathChaos/react-native-bouncy-checkbox
+import { Ribbon } from "./Ribbon";
+import { TextWithIcons } from "./TextWithIcons";
+
 
 const animalsSourceMap: ImageSourcePropType[] = [
     require("@/assets/images/animals/bear.png"),
@@ -29,31 +30,18 @@ const animalsSourceMap: ImageSourcePropType[] = [
 ]
 
 export default function Card({ scenario, index, callback }: { scenario: IScenario, index: number, callback: Function }) {
-    const [modalVisible, setModalVisible] = useState(false);
-    const [number, onChangeNumber] = React.useState('');
-    const [highscore, onChangeHighscore] = React.useState(0);
+    const [completed, onChangeCompleted] = React.useState(false);
     const { width: windowWidth } = useWindowDimensions();
     const lang = useTaskContext().lang;
     const texts: ILoc = localization;
-
-    const onScoreSubmitted = (): void => {
-        if (parseInt(number) > highscore) {
-            onChangeHighscore(parseInt(number));
-            DataManager.instance.setNewHighscore(index, parseInt(number));
-            callback();
-        }
-        setModalVisible(false);
-    }
-
-    const onResetScore = (): void => {
-        onChangeHighscore(0);
-        DataManager.instance.setNewHighscore(index, 0);
-        callback();
+    
+    const onChangeScenarioState = (complete: boolean): void => {
+        DataManager.instance.setScenarioCompletedState(index, complete);
+        onChangeCompleted(complete);
     }
 
     useEffect(() => {
-        const previousHighscore: number = DataManager.instance.getHighscore(index);
-        onChangeHighscore(previousHighscore);
+        onChangeCompleted(DataManager.instance.isScenarioCompleted(index));
     }, []);
 
     return (
@@ -78,7 +66,12 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                         iconStyle={{ borderColor: "#408c80" }}
                         innerIconStyle={{ borderWidth: 3 }}
                         disableText={true}
-                        onPress={(isChecked: boolean) => { console.log(isChecked) }}
+                        // disabled={completed}
+                        isChecked={completed}
+                        onPress={
+                            (isChecked: boolean) => {
+                                onChangeScenarioState(isChecked);
+                            }}
                     />
                 </View>
             </View>
@@ -114,7 +107,9 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                     <View style={styles.extraContainer}>
                         {scenario.extra.map((info, index) => {
                             return (
-                                <TextWithIcons content={info[lang]} key={index} />
+                                <View key={index}>
+                                    <TextWithIcons content={info[lang]} />
+                                </View>
                             );
                         })}
                     </View>

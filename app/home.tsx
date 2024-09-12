@@ -11,7 +11,7 @@ export default function HomeScreen({navigation}: any) {
 
     useEffect(() => {
         DataManager.init();
-        DataManager.instance.getHighscore(1);
+        // DataManager.instance.getHighscore(1);
         if (Platform.OS === 'web' || Platform.OS === 'ios') {
             setTimeout(() => {
                 onPress()

@@ -11,7 +11,7 @@ export interface IStorageData {
 
 export interface IScenarioData {
     id: number;
-    highscore: number;
+    completed: boolean;
 }
 
 export default class DataManager {
@@ -39,7 +39,7 @@ export default class DataManager {
         DataManager._instance = this;
         this.initData();
         this.loadData();
-        // console.log('[DataManager] storageData: ' +JSON.stringify(this.storageData));
+        console.log('[DataManager] storageData: ' +JSON.stringify(this.storageData));
     }
 
     private initData(): void {
@@ -51,7 +51,7 @@ export default class DataManager {
             currentLang: 'en'
         };
         for (let i: number = 0; i < data.scenarios.length; i++) {
-            this.storageData.scenarios.push({ id: i, highscore: 0 });   
+            this.storageData.scenarios.push({ id: i, completed: false });   
         }
     }
 
@@ -81,13 +81,6 @@ export default class DataManager {
         }
       };
 
-    // public isAudioEnabled(): boolean {
-    //     return cc.sys.localStorage.getItem('audio') === 'true';
-    // }
-    // public setAudioEnabled(enabled: boolean) {
-    //     this.saveData('audio', enabled);
-    // }
-
     public getScenarios(): IScenarioData[] {
         return this.storageData.scenarios.slice();
     }
@@ -96,13 +89,13 @@ export default class DataManager {
         return this.storageData.scenarios[index];
     }
 
-    public setNewHighscore(id: number, highscore: number): void {
-        this.storageData.scenarios[id].highscore = highscore;
+    public setScenarioCompletedState(id: number, completed: boolean): void {
+        this.storageData.scenarios[id].completed = completed;
         this.saveData(this.storageData);
     }
 
-    public getHighscore(id: number): number {
-        return this.storageData.scenarios[id].highscore;
+    public isScenarioCompleted(id: number): boolean {
+        return this.storageData.scenarios[id].completed;
     }
 
     public setLastScenario(id: number): void {
@@ -115,14 +108,15 @@ export default class DataManager {
     }
 
     public getGoldMedals(): number {
-        let counter: number = 0;
-        for (let i: number = 0; i < this.storageData.scenarios.length; i++) {
-            const score: number = this.storageData.scenarios[i].highscore;
-            if (score >= 130) {
-                counter += 1;
-            }
-        }
-        return counter;
+        // let counter: number = 0;
+        // for (let i: number = 0; i < this.storageData.scenarios.length; i++) {
+        //     const score: number = this.storageData.scenarios[i].highscore;
+        //     if (score >= 130) {
+        //         counter += 1;
+        //     }
+        // }
+        // return counter;
+        return 10;
     }
 
     public getTotalGoldMedals(): number {
