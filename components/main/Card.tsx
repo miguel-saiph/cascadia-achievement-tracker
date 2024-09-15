@@ -1,4 +1,4 @@
-import { IScenario } from "@/app/carousel";
+import { IScenario } from "@/app/(tabs)/scenarios";
 import { ThemedText } from "@/components/ThemedText";
 import { CardNames, MapType } from "@/components/main/CardNames";
 import { HighScore } from "@/components/main/HighScore";
@@ -60,7 +60,7 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                 <View style={[styles.tab, styles.tabRight]}>
                     <BouncyCheckbox
                         style={styles.tabCheckbox}
-                        size={25}
+                        size={30}
                         fillColor="#408c80"
                         unFillColor="#FFFFFF"
                         iconStyle={{ borderColor: "#408c80" }}
@@ -177,7 +177,8 @@ const styles = StyleSheet.create({
         margin: 10
     },
     tabCheckbox: {
-        margin: 10
+        margin: 10,
+        alignSelf: 'center'
     },
     animalContainer: {
         margin: 5

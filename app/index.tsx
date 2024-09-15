@@ -1,9 +1,4 @@
-import PressableOpacity from "@/components/PressableAnimation";
-import { ThemedText } from "@/components/ThemedText";
-import { useRef, useEffect } from "react";
-import { Button, Pressable, Text, View } from "react-native";
-import { Image, Animated } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { useEffect } from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from "./home";
 
@@ -11,11 +6,8 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-// import MainScreen from "./main";
-import Carousel from "./carousel";
-import { StatusBar } from "expo-status-bar";
 import { ConfigProvider } from "@/hooks/configContext";
+import Scenarios from "./(tabs)/scenarios";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -47,17 +39,12 @@ export default function Index() {
                     component={HomeScreen}
                     options={{ headerShown: false }}
                 />
-                {/* <Stack.Screen
-                name="Main"
-                component={MainScreen}
-                options={{ headerShown: false }}
-            /> */}
                 <Stack.Screen
-                    name="Carousel"
-                    component={Carousel}
+                    name="Scenarios"
+                    component={Scenarios}
                     options={{ headerShown: false }}
                 />
-            </Stack.Navigator>
+            </Stack.Navigator> 
         </ConfigProvider>
 
     );

@@ -29,7 +29,7 @@ export interface IScenario {
     }[]
 }
 
-export default function Carousel({ navigation }: any) {
+export default function Scenarios({ navigation }: any) {
     let scrollX = useRef(new Animated.Value(0)).current;
     const [xCoords, setXCoords] = useState([] as number[]);
     const [loaded, setLoaded] = useState(false);
@@ -75,6 +75,7 @@ export default function Carousel({ navigation }: any) {
                 // alignItems: "center",
                 flex: 1
             }}>
+                <View style={{height: 80}}/>
                 <View style={styles.topBarContainer}>
                     <Info />
                     <MedalsCount current={currentMedals} />
@@ -82,16 +83,7 @@ export default function Carousel({ navigation }: any) {
                 <View style={styles.scrollContainer}>
                     <ScrollView
                         ref={refScrollView}
-                        // pagingEnabled
-                        // contentOffset={
-                        //     {
-                        //         x: xCoords[DataManager.instance.getLastScenario()],
-                        //         y: 0
-                        //     }
-                        // }
-                        // showsHorizontalScrollIndicator={Platform.OS !== 'web' ? false : true}
                         showsVerticalScrollIndicator={true}
-                        // persistentScrollbar={Platform.OS !== 'web' ? false : true}
                         onScroll={
                             Animated.event([
                                 {
@@ -134,7 +126,9 @@ export default function Carousel({ navigation }: any) {
                                 </View>
                             );
                         })}
+                        <View style={{height: 80}}/>
                     </ScrollView>
+                    
                 </View>
             </ImageBackground>
             <Animated.View style={{
@@ -160,13 +154,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingLeft: 20,
-        paddingRight: 15
+        paddingRight: 15,
     },
     scrollContainer: {
         height: 550,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 5
+        paddingTop: 5,
+        // marginBottom: 170
     },
     normalDot: {
         height: 8,
