@@ -8,14 +8,19 @@ const iconsMap: { [key: string]: ImageSourcePropType } = {
     [':hawk:']: require('@/assets/images/animals/hawk.png'),
     [':salmon:']: require('@/assets/images/animals/salmon.png'),
     [':nature:']: require('@/assets/images/nature_token.png'),
-    [':ribbon:']: require('@/assets/images/ribbon.png')
+    [':ribbon:']: require('@/assets/images/ribbon.png'),
+    [':wetland:']: require('@/assets/images/habitats/wetland.png'),
+    [':mountain:']: require('@/assets/images/habitats/mountain.png'),
+    [':prairie:']: require('@/assets/images/habitats/prairie.png'),
+    [':river:']: require('@/assets/images/habitats/river.png'),
+    [':forest:']: require('@/assets/images/habitats/forest.png')
 }
 
 export function TextWithIcons({ content }: { content: string }) {
 
     return (
         <View style={{ flexDirection: 'row' }}>
-            <ThemedText>{'\u2022'} </ThemedText>
+            <ThemedText style={styles.text}>{'\u2022'} </ThemedText>
             {
                 content.split(/(:.*?:)/g).map((elem, index) => {
                     if (!elem) return null;
@@ -36,16 +41,12 @@ export function TextWithIcons({ content }: { content: string }) {
             }
         </View>
     )
-
-
-
 }
 
 const styles = StyleSheet.create({
     icon: {
         width: 30,
-        height: 30,
-        // marginTop: -1
+        height: 30
     },
     text: {
         fontFamily: 'Mackinac',
