@@ -16,11 +16,11 @@ const iconsMap: { [key: string]: ImageSourcePropType } = {
     [':forest:']: require('@/assets/images/habitats/forest.png')
 }
 
-export function TextWithIcons({ content }: { content: string }) {
+export function TextWithIcons({ content, flex, useBulletPoint }: { content: string, flex?: number, useBulletPoint?: boolean }) {
 
     return (
-        <View style={{ flexDirection: 'row' }}>
-            <ThemedText style={styles.text}>{'\u2022'} </ThemedText>
+        <View style={{ flexDirection: 'row', flex: flex }}>
+            <ThemedText style={styles.text}>{useBulletPoint ? '\u2022': ''} </ThemedText>
             {
                 content.split(/(:.*?:)/g).map((elem, index) => {
                     if (!elem) return null;

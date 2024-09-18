@@ -108,7 +108,7 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
                         {scenario.extra.map((info, index) => {
                             return (
                                 <View key={index}>
-                                    <TextWithIcons content={info[lang]} />
+                                    <TextWithIcons content={info[lang]} useBulletPoint={true} />
                                 </View>
                             );
                         })}
@@ -208,12 +208,6 @@ const styles = StyleSheet.create({
     },
     extraContainer: {
         margin: 2
-    },
-    extraText: {
-        fontFamily: 'Mackinac',
-        fontSize: 16,
-        color: '#000',
-        textAlign: 'left'
     },
     appButtonContainer: {
         backgroundColor: "#009688",

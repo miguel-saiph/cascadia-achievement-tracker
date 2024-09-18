@@ -24,7 +24,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="normal"
         options={{
           title: 'Normal',
           tabBarIcon: ({ color, focused }) => (

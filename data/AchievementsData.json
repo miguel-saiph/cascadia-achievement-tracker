@@ -178,5 +178,107 @@
                 }
             ]
         }
+    ],
+    "normal_achievements": [
+        {
+            "en": "Score 80+ points",
+            "es": "Puntúa +80 puntos"
+        },
+        {
+            "en": "Score 85+ points",
+            "es": "Puntúa +85 puntos"
+        },
+        {
+            "en": "Score 90+ points",
+            "es": "Puntúa +90 puntos"
+        },
+        {
+            "en": "Score 95+ points",
+            "es": "Puntúa +95 puntos"
+        },
+        {
+            "en": "Score 100+ points",
+            "es": "Puntúa +100 puntos"
+        },
+        {
+            "en": "Score 105+ points",
+            "es": "Puntúa +105 puntos"
+        },
+        {
+            "en": "Score 110+ points",
+            "es": "Puntúa +110 puntos"
+        },
+        {
+            "en": "Have no :nature: left",
+            "es": "No tengas ningún :nature:"
+        },
+        {
+            "en": "Have no :bear:",
+            "es": "No tengas ningún :bear:"
+        },
+        {
+            "en": "Have no :elk:",
+            "es": "No tengas ningún :elk:"
+        },
+        {
+            "en": "Have no :salmon:",
+            "es": "No tengas ningún :salmon:"
+        },
+        {
+            "en": "Have no :hawk:",
+            "es": "No tengas ningún :hawk:"
+        },
+        {
+            "en": "Have no :fox:",
+            "es": "No tengas ningún :fox:"
+        },
+        {
+            "en": "Have no more than 10 of a single Wildlife",
+            "es": "No tengas más de 10 de un mismo Animal"
+        },
+        {
+            "en": "Win majority for 3 Habitats",
+            "es": "Gana la mayoría en 3 Hábitats"
+        },
+        {
+            "en": "Score 5+ points for all Habitats",
+            "es": "Puntúa +5 puntos por todos los Hábitats"
+        },
+        {
+            "en": "Score 10+ points for a single Habitat",
+            "es": "Puntúa +10 puntos por un solo Hábitat"
+        },
+        {
+            "en": "Score 15+ points for a single Habitat",
+            "es": "Puntúa +15 puntos por un solo Hábitat"
+        },
+        {
+            "en": "Score 10+ points for each Wildlife",
+            "es": "Puntúa +10 puntos por cada Animal"
+        },
+        {
+            "en": "Score 20+ points for two Wildlife",
+            "es": "Puntúa +20 puntos por dos Animales"
+        },
+        {
+            "en": "Score 30+ points for a single Wildlife",
+            "es": "Puntúa +30 puntos por un solo Animal"
+        },
+        {
+            "en": "End the game with 5+ :nature:",
+            "es": "Termina el juego con +5 :nature:"
+        },
+        {
+            "en": "End the game with 10+ :nature:",
+            "es": "Termina el juego con +10 :nature:"
+        },
+        {
+            "en": "Have no completed Keystone Habitats",
+            "es": "No completes ningún Hábitat Clave"
+        },
+        {
+            "en": "Only have 3 types of Wildlife",
+            "es": "Sólo juega 3 tipos de Animales"
+        }
     ]
 }
