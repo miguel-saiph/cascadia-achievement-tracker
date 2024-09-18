@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
+    SafeAreaView,
     ScrollView,
     StyleSheet,
     View,
+    ImageBackground,
     Animated,
     useWindowDimensions,
     Platform
@@ -17,7 +19,7 @@ import localization from '@/data/Localization.json';
 import Achievement from '@/components/main/Achievement';
 import MainScreen from '@/components/main/MainScreensLayout';
 
-export default function NormalGame({ navigation }: any) {
+export default function Restrictions({ navigation }: any) {
     let scrollX = useRef(new Animated.Value(0)).current;
     const [xCoords, setXCoords] = useState([] as number[]);
     const [loaded, setLoaded] = useState(false);
@@ -30,31 +32,8 @@ export default function NormalGame({ navigation }: any) {
     const texts: ILoc = localization;
 
     useEffect(() => {
-        // refScrollView.current.scrollTo({x: xCoords[2], animated: false});
-        updateCurrentMedals();
-        setTimeout(() => {
-            Animated.timing(fadeAnim, {
-                toValue: 0,
-                duration: 500,
-                useNativeDriver: false
-            }).start(({ finished }) => {
-                if (finished) {
-                    setFullyLoaded(true);
-                }
-            })
-        }, 200);
-    }, [loaded, refScrollView]);
-
-    const handleScroll = (event: any) => {
-        const index: number = xCoords.indexOf((scrollX as any).__getValue(), 0);
-        if (index !== -1) {
-            DataManager.instance.setLastScenario(index);
-        }
-    };
-
-    const updateCurrentMedals = () => {
-        setCurrentMedals(DataManager.instance.getGoldMedals());
-    };
+        // updateCurrentMedals();
+    }, []);
 
     return (
         <MainScreen children={
@@ -73,7 +52,7 @@ export default function NormalGame({ navigation }: any) {
                             },
                         ], {
                             useNativeDriver: false,
-                            listener: handleScroll
+                            // listener: handleScroll
                         })
                     }
                     scrollEventThrottle={1}>
@@ -89,7 +68,7 @@ export default function NormalGame({ navigation }: any) {
                             }
                         }>
 
-                        {(data.normal_achievements).map((text, index) => {
+                        {(data.restrictions).map((text, index) => {
                             return (
                                 <View key={index}>
                                     <Achievement info={text} index={index} callback={() => { }} />

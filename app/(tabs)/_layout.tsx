@@ -33,7 +33,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="list"
+        name="restrictions"
         options={{
           title: 'Restrictions',
           tabBarIcon: ({ color, focused }) => (

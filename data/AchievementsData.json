@@ -182,59 +182,59 @@
     "normal_achievements": [
         {
             "en": "Score 80+ points",
-            "es": "Puntúa +80 puntos"
+            "es": "Puntúa 80 puntos o más"
         },
         {
             "en": "Score 85+ points",
-            "es": "Puntúa +85 puntos"
+            "es": "Puntúa 85 puntos o más"
         },
         {
             "en": "Score 90+ points",
-            "es": "Puntúa +90 puntos"
+            "es": "Puntúa 90 puntos o más"
         },
         {
             "en": "Score 95+ points",
-            "es": "Puntúa +95 puntos"
+            "es": "Puntúa 95 puntos o más"
         },
         {
             "en": "Score 100+ points",
-            "es": "Puntúa +100 puntos"
+            "es": "Puntúa 100 puntos o más"
         },
         {
             "en": "Score 105+ points",
-            "es": "Puntúa +105 puntos"
+            "es": "Puntúa 105 puntos o más"
         },
         {
             "en": "Score 110+ points",
-            "es": "Puntúa +110 puntos"
+            "es": "Puntúa 110 puntos o más"
         },
         {
             "en": "Have no :nature: left",
-            "es": "No tengas ningún :nature:"
+            "es": "Termina sin :nature:"
         },
         {
             "en": "Have no :bear:",
-            "es": "No tengas ningún :bear:"
+            "es": "Termina sin :bear:"
         },
         {
             "en": "Have no :elk:",
-            "es": "No tengas ningún :elk:"
+            "es": "Termina sin :elk:"
         },
         {
             "en": "Have no :salmon:",
-            "es": "No tengas ningún :salmon:"
+            "es": "Termina sin :salmon:"
         },
         {
             "en": "Have no :hawk:",
-            "es": "No tengas ningún :hawk:"
+            "es": "Termina sin :hawk:"
         },
         {
             "en": "Have no :fox:",
-            "es": "No tengas ningún :fox:"
+            "es": "Termina sin :fox:"
         },
         {
             "en": "Have no more than 10 of a single Wildlife",
-            "es": "No tengas más de 10 de un mismo Animal"
+            "es": "Ten 10 o más fichas de un tipo de fauna"
         },
         {
             "en": "Win majority for 3 Habitats",
@@ -242,43 +242,85 @@
         },
         {
             "en": "Score 5+ points for all Habitats",
-            "es": "Puntúa +5 puntos por todos los Hábitats"
+            "es": "Puntúa 5 o más en todos los Hábitats"
         },
         {
-            "en": "Score 10+ points for a single Habitat",
-            "es": "Puntúa +10 puntos por un solo Hábitat"
+            "en": "Score 12+ points for a single Habitat",
+            "es": "Puntúa 12 o más en un solo Hábitat"
         },
         {
             "en": "Score 15+ points for a single Habitat",
-            "es": "Puntúa +15 puntos por un solo Hábitat"
+            "es": "Puntúa 15 o más en un solo Hábitat"
         },
         {
             "en": "Score 10+ points for each Wildlife",
-            "es": "Puntúa +10 puntos por cada Animal"
+            "es": "Puntúa 10 o más por cada tipo de fauna"
         },
         {
             "en": "Score 20+ points for two Wildlife",
-            "es": "Puntúa +20 puntos por dos Animales"
+            "es": "Puntúa 20 o más con dos tipos de fauna"
         },
         {
             "en": "Score 30+ points for a single Wildlife",
-            "es": "Puntúa +30 puntos por un solo Animal"
+            "es": "Puntúa 30 o más en un tipo de fauna"
         },
         {
             "en": "End the game with 5+ :nature:",
-            "es": "Termina el juego con +5 :nature:"
+            "es": "Termina con 5 o más :nature:"
         },
         {
             "en": "End the game with 10+ :nature:",
-            "es": "Termina el juego con +10 :nature:"
+            "es": "Termina con 10 o más :nature:"
         },
         {
             "en": "Have no completed Keystone Habitats",
-            "es": "No completes ningún Hábitat Clave"
+            "es": "Termina sin ecosistemas claves completos"
         },
         {
             "en": "Only have 3 types of Wildlife",
-            "es": "Sólo juega 3 tipos de Animales"
+            "es": "Termina con solo 3 tipos de fauna"
+        }
+    ],
+    "restrictions": [
+        {
+            "en": "At least one Habitat must match when placing tiles",
+            "es": "Al menos un Hábitat debe coincidir al colocar losetas"
+        },
+        {
+            "en": "No matching Habitats may touch when placing tiles (Note: ignore Habitat scoring this time)",
+            "es": "Los Hábitats no pueden coincidir al colocar losetas (Nota: ignora la puntuación de Hábitats en esta partida)"
+        },
+        {
+            "en": "Habitat Scoring change: All Habitat corridors of exactly three count for 3 points each.",
+            "es": "Cambio de puntuación de Hábitats: cada superficie de Hábitat de exactamente tres losetas da 3 puntos"
+        },
+        {
+            "en": "Habitat Scoring change: Habitat corridors must be 5+ in size to score",
+            "es": "Cambio en la puntuación de Hábitats: las superficies de Hábitats deben ser de tamaño 5 o más para puntuar"
+        },
+        {
+            "en": "Play with a display of only three pairs of tiles/tokens",
+            "es": "Juega con un despliegue de solo tres pares de losetas/fichas de fauna salvaje en lugar de cuatro"
+        },
+        {
+            "en": "Play with two sets of Wildlife Scoring Cards - players each choose which of the two they wish to score",
+            "es": "Juega con dos grupos de cartas de puntuación de fauna salvaje, los jugadores eligen con cuál puntuar"
+        },
+        {
+            "en": "Do not use Starter Habitat Tiles. Instead, each player's environments starts with two random Habitat Tiles",
+            "es": "No utilices losetas de Hábitat inicial. El entorno de cada jugador comienza con dos losetas de Hábitat al azar"
+        },
+        {
+            "en": "Two Nature Token are required to take a Nature Token Action",
+            "es": "Se necesitan dos fichas de naturaleza para realizar una acción de ficha de naturaleza"
+        },
+        {
+            "en": "You may not place the Wildlife Token on the Habitat Tile you just placed",
+            "es": "No puedes situar la ficha de fauna salvaje en la loseta de Hábitat que acabas de colocar"
+        },
+        {
+            "en": "Play with revealing scoring cards - each player starts the game with one of the five Wildlife Scoring Cards in their hand (secret), and any remaining are public on the table. When you play a Nature Token, reveal you scoring card by placing it face-up on the table",
+            "es": "Revelando cartas de puntuación. Cada jugador comienza la partida con una de las cinco cartas de puntuación de fauna salvaje en su mano (secreta), y las restantes son visibles para todos los jugadores en la mesa. Cuando juegues una ficha de naturaleza, revela tu carta de puntuación poniéndola bocarriba en la mesa"
         }
     ]
 }

@@ -20,6 +20,7 @@ import DataManager from '@/data/DataManager';
 import { Info } from '@/components/main/Info';
 import { MedalsCount } from '@/components/main/MedalsCount';
 import { ScenarioNumber } from '@/components/main/ScenarioNumber';
+import MainScreen from '@/components/main/MainScreensLayout';
 
 export interface IScenario {
     cards: string[],
@@ -67,80 +68,60 @@ export default function Scenarios({ navigation }: any) {
     };
 
     return (
-        <SafeAreaView style={styles.container}>
-            <ImageBackground source={require('@/assets/images/background.jpg')} style={{
-                width: '100%',
-                height: '100%',
-                justifyContent: "center",
-                // alignItems: "center",
-                flex: 1
-            }}>
-                <View style={{height: 80}}/>
-                <View style={styles.topBarContainer}>
-                    <Info />
-                    <MedalsCount current={currentMedals} />
-                </View>
-                <View style={styles.scrollContainer}>
-                    <ScrollView
-                        ref={refScrollView}
-                        showsVerticalScrollIndicator={true}
-                        onScroll={
-                            Animated.event([
-                                {
-                                    nativeEvent: {
-                                        contentOffset: {
-                                            x: scrollX
-                                        }
-                                    },
+        <MainScreen children={
+            <View style={styles.scrollContainer}>
+                <ScrollView
+                    ref={refScrollView}
+                    showsVerticalScrollIndicator={true}
+                    onScroll={
+                        Animated.event([
+                            {
+                                nativeEvent: {
+                                    contentOffset: {
+                                        x: scrollX
+                                    }
                                 },
-                            ], {
-                                useNativeDriver: false,
-                                listener: handleScroll
-                            })
-                        }
-                        scrollEventThrottle={1}>
-                        {data.scenarios.map((scenario, index) => {
-                            return (
-                                <View
-                                    style={{
-                                        width: windowWidth,
-                                        height: 'auto',
-                                        marginBottom: 15
+                            },
+                        ], {
+                            useNativeDriver: false,
+                            listener: handleScroll
+                        })
+                    }
+                    scrollEventThrottle={1}>
+                    {data.scenarios.map((scenario, index) => {
+                        return (
+                            <View
+                                style={{
+                                    width: windowWidth,
+                                    height: 'auto',
+                                    marginBottom: 15
 
-                                    }} key={index}
-                                    onLayout={
-                                        event => {
-                                            const layout = event.nativeEvent.layout;
-                                            xCoords[index] = layout.x;
-                                            if (index >= data.scenarios.length - 1) {
-                                                setLoaded(true);
-                                            }
+                                }} key={index}
+                                onLayout={
+                                    event => {
+                                        const layout = event.nativeEvent.layout;
+                                        xCoords[index] = layout.x;
+                                        if (index >= data.scenarios.length - 1) {
+                                            setLoaded(true);
                                         }
                                     }
-                                    onPointerEnterCapture={
-                                        () => { DataManager.instance.setLastScenario(index) }
-                                    }>
+                                }
+                                onPointerEnterCapture={
+                                    () => { DataManager.instance.setLastScenario(index) }
+                                }>
 
-                                    <Card scenario={scenario as unknown as IScenario} index={index} callback={updateCurrentMedals} />
-                                    {/* <ScenarioNumber number={index + 1} /> */}
-                                </View>
-                            );
-                        })}
-                        <View style={{height: 80}}/>
-                    </ScrollView>
-                    
-                </View>
-            </ImageBackground>
-            <Animated.View style={{
-                flex: 1,
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'white',
-                position: 'absolute',
-                opacity: fadeAnim,
-                display: fullyLoaded ? 'none' : 'flex'
-            }} />
-        </SafeAreaView>
+                                <Card scenario={scenario as unknown as IScenario} index={index} callback={updateCurrentMedals} />
+                                {/* <ScenarioNumber number={index + 1} /> */}
+                            </View>
+                        );
+                    })}
+                    <View style={{ height: 80 }} />
+                </ScrollView>
+
+            </View>
+        }>
+
+        </MainScreen>
     );
 };
 

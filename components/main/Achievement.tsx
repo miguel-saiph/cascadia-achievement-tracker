@@ -39,7 +39,7 @@ export default function Achievement({ info, index, callback }: { info: any, inde
                     <ThemedText style={styles.numberText}
                         adjustsFontSizeToFit={true}
                         numberOfLines={1}
-                    > {index + 1} </ThemedText>
+                    > {index + 1}. </ThemedText>
                 </View>
                 <View style={styles.content}>
                     <View style={{
@@ -87,13 +87,16 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomRightRadius: 20,
         marginTop: 10,
+        borderStyle: 'solid',
+        borderColor: '#3a180d',
+        borderWidth: 2
         // opacity: .9
     },
     checkbox: {
         flex: 2,
         marginLeft: 'auto',
         paddingRight: 10,
-        paddingLeft: 30
+        paddingLeft: 10
     },
     extraContainer: {
         flex: 1,
@@ -112,10 +115,10 @@ const styles = StyleSheet.create({
     numberText: {
         fontFamily: 'Volkoba',
         color: '#fff',
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center',
         verticalAlign: 'middle',
         alignSelf: 'center',
-        margin: 10
+        margin: 8
     }
 });

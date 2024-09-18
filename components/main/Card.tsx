@@ -144,12 +144,15 @@ const styles = StyleSheet.create({
         elevation: 7,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
+        borderStyle: 'solid',
+        borderColor: '#3a180d',
+        borderWidth: 2
         // opacity: .9
     },
     tabContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        // paddingLeft: 20,
+        marginLeft: -2
         // paddingRight: 15
     },
     tab: {
@@ -168,6 +171,7 @@ const styles = StyleSheet.create({
     tabRight: {
         alignSelf: 'flex-end',
         alignItems: 'flex-end',
+        marginRight: -2
     },
     tabText: {
         fontFamily: 'Volkoba',
