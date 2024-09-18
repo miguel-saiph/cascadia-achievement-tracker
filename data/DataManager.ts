@@ -4,12 +4,19 @@ import data from '@/data/AchievementsData.json';
 export interface IStorageData {
     audio: boolean;
     version: number;
-    scenarios: IScenarioData[];
-    lastScenario: number;
+    data: {
+        [expansion: string]: {
+            scenarios: IAchievementData[],
+            normal: IAchievementData[],
+            restrictions: IAchievementData[]
+        }
+    }
+    // scenarios: IAchievementData[];
+    currentMode: 'base' | 'landmarks';
     currentLang: string;
 }
 
-export interface IScenarioData {
+export interface IAchievementData {
     id: number;
     completed: boolean;
 }
@@ -17,7 +24,7 @@ export interface IScenarioData {
 export default class DataManager {
     private storageData!: IStorageData;
     private localData: { [key: number]: any } = {};
-    private dataVersion: number = 0.4;
+    private dataVersion: number = 0.7;
 
     public allUnlocked: boolean = false;
 
@@ -46,12 +53,32 @@ export default class DataManager {
         this.storageData = {
             audio: true,
             version: this.dataVersion,
-            scenarios: [],
-            lastScenario: 0,
+            data: {
+                ['base']: {
+                    scenarios: [],
+                    normal: [],
+                    restrictions: []
+                },
+                ['landmarks']: {
+                    scenarios: [],
+                    normal: [],
+                    restrictions: []
+                }
+            },
+            currentMode: 'base',
             currentLang: 'en'
         };
-        for (let i: number = 0; i < data.scenarios.length; i++) {
-            this.storageData.scenarios.push({ id: i, completed: false });   
+        for (let i: number = 0; i < Object.keys(data).length; i++) {
+            const mode: string = Object.keys(this.storageData.data)[i];
+            for (let j: number = 0; j < (data as any)[mode].scenarios.length; j++) {
+                this.storageData.data[mode].scenarios.push({ id: i, completed: false });  
+            }
+            for (let j: number = 0; j < (data as any)[mode].normal_achievements.length; j++) {
+                this.storageData.data[mode].normal.push({ id: i, completed: false });  
+            }
+            for (let j: number = 0; j < (data as any)[mode].restrictions.length; j++) {
+                this.storageData.data[mode].restrictions.push({ id: i, completed: false });  
+            }
         }
     }
 
@@ -81,30 +108,49 @@ export default class DataManager {
         }
       };
 
-    public getScenarios(): IScenarioData[] {
-        return this.storageData.scenarios.slice();
+    public getScenarios(): IAchievementData[] {
+        return this.storageData.data[this.storageData.currentMode].scenarios.slice();
     }
 
-    public getScenario(index: number): IScenarioData {
-        return this.storageData.scenarios[index];
+    public getScenario(index: number): IAchievementData {
+        return this.storageData.data[this.storageData.currentMode].scenarios[index];
     }
 
     public setScenarioCompletedState(id: number, completed: boolean): void {
-        this.storageData.scenarios[id].completed = completed;
+        this.storageData.data[this.storageData.currentMode].scenarios[id].completed = completed;
         this.saveData(this.storageData);
     }
+    
 
     public isScenarioCompleted(id: number): boolean {
-        return this.storageData.scenarios[id].completed;
+        return this.storageData.data[this.storageData.currentMode].scenarios[id].completed;
     }
 
-    public setLastScenario(id: number): void {
-        this.storageData.lastScenario = id;
+    public setAchievementCompletedState(id: number, type: 'normal' | 'restriction', completed: boolean): void {
+        if (type === 'normal') {
+            this.storageData.data[this.storageData.currentMode].normal[id].completed = completed;
+        } else if (type === 'restriction') {
+            this.storageData.data[this.storageData.currentMode].restrictions[id].completed = completed;
+        }
         this.saveData(this.storageData);
     }
 
-    public getLastScenario(): number {
-        return this.storageData.lastScenario;
+    public getAchievementState(id: number, type: 'normal' | 'restriction'): boolean {
+        if (type === 'normal') {
+            return this.storageData.data[this.storageData.currentMode].normal[id].completed;
+        } else if (type === 'restriction') {
+            return this.storageData.data[this.storageData.currentMode].restrictions[id].completed;
+        }
+        return false;
+    }
+
+    public setCurrentMode(mode: 'base' | 'landmarks'): void {
+        this.storageData.currentMode = mode;
+        this.saveData(this.storageData);
+    }
+
+    public getCurrentMode(): string {
+        return this.storageData.currentMode;
     }
 
     public getGoldMedals(): number {
@@ -120,7 +166,8 @@ export default class DataManager {
     }
 
     public getTotalGoldMedals(): number {
-        return this.storageData.scenarios.length;
+        // return this.storageData.scenarios.length;
+        return 1;
     }
 
     public getCurrentLang(): string {

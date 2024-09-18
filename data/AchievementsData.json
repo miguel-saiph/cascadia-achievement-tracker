@@ -1,326 +1,834 @@
 {
-    "scenarios": [
-        {
-            "cards": ["A", "A", "A", "A", "A"],
-            "score": 80,
-            "extra": []
-        },
-        {
-            "cards": ["B", "B", "B", "B", "B"],
-            "score": 80,
-            "extra": []
-        },
-        {
-            "cards": ["C", "C", "C", "C", "C"],
-            "score": 80,
-            "extra": []
-        },
-        {
-            "cards": ["D", "D", "D", "D", "D"],
-            "score": 85,
-            "extra": []
-        },
-        {
-            "cards": ["C", "D", "B", "B", "B"],
-            "score": 85,
-            "extra": [
-                {
-                    "en": "Fully score :fox: 3 times",
-                    "es": "Puntúa :fox: completamente 3 veces"
-                }
-            ]
-        },
-        {
-            "cards": ["D", "B", "C", "C", "B"],
-            "score": 85,
-            "extra": [
-                {
-                    "en": "Play at least 4 of every animal",
-                    "es": "Juega por lo menos 4 de cada animal"
-                }
-            ]
-        },
-        {
-            "cards": ["B", "C", "C", "D", "C"],
-            "score": 90,
-            "extra": [
-                {
-                    "en": "Score at least 20 points in :hawk:",
-                    "es": "Obtén por lo menos 20 puntos en :hawk:"
-                }
-            ]
-        },
-        {
-            "cards": ["C", "B", "B", "A", "D"],
-            "score": 90,
-            "extra": [
-                {
-                    "en": "Score at least 5 points in :nature:",
-                    "es": "Obtén por lo menos 5 puntos en :nature:"
-                },
-                {
-                    "en": "Don't place a :bear: next to an :elk:",
-                    "es": "No pongas un :bear: adyacente a un :elk:"
-                }
-            ]
-        },
-        {
-            "cards": ["C", "A", "D", "C", "B"],
-            "score": 90,
-            "extra": [
-                {
-                    "en": "Score at least 10 in every animal",
-                    "es": "Obtén por lo menos 10 puntos en cada animal"
-                },
-                {
-                    "en": "Score at least 5 in every habitat",
-                    "es": "Obtén por lo menos 5 puntos en cada hábitat"
-                }
-            ]
-        },
-        {
-            "cards": ["C", "B", "D", "B", "B"],
-            "score": 95,
-            "extra": [
-                {
-                    "en": "Score at least 60 in wild life (W)",
-                    "es": "Obtén por lo menos 60 puntos en vida salvaje (F)"
-                },
-                {
-                    "en": "Score at least 7 points in 3 different habitats",
-                    "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
-                }
-            ]
-        },
-        {
-            "cards": ["B", "A", "A", "C", "A"],
-            "score": 95,
-            "extra": [
-                {
-                    "en": "Score at least 30 points in :bear:",
-                    "es": "Obtén por lo menos 30 puntos en :bear:"
-                },
-                {
-                    "en": "Don't play a :forest: next to a :river:",
-                    "es": "No juegues un :forest: adyacente a un :river:"
-                }
-            ]
-        },
-        {
-            "cards": ["A", "B", "A", "A", "C"],
-            "score": 95,
-            "extra": [
-                {
-                    "en": "Fully score 1 :salmon:",
-                    "es": "Puntúa :salmon: completamente 1 vez"
-                },
-                {
-                    "en": "Don't play an :elk: in a :forest:",
-                    "es": "No juegues un :elk: en un :forest:"
-                },
-                {
-                    "en": "Score at least 12 in 1 habitat",
-                    "es": "Obtén por lo menos 12 puntos en 1 hábitat"
-                }
-            ]
-        },
-        {
-            "cards": ["D", "C", "C", "B", "C"],
-            "score": 100,
-            "extra": [
-                {
-                    "en": "Fully score 1 :elk:",
-                    "es": "Puntúa :elk: completamente 1 vez"
-                },
-                {
-                    "en": "Play at least 5 :hawk:",
-                    "es": "Juega por lo menos 5 :hawk:"
-                },
-                {
-                    "en": ":hawk: must be played adyacent to :elk:",
-                    "es": ":hawk: debe jugarse adyacente a :elk:"
-                }
-            ]
-        },
-        {
-            "cards": ["A", "C", "B", "A", "D"],
-            "score": 100,
-            "extra": [
-                {
-                    "en": "Don't play a :mountain: next to a :prairie:",
-                    "es": "No juegues una :mountain: adyacente a un :prairie:"
-                },
-                {
-                    "en": "Don't play a :wetland: next to a :river:",
-                    "es": "No juegues un :wetland: adyacente a un :river:"
-                },
-                {
-                    "en": "Score at least 35 in total in habitat (H)",
-                    "es": "Obtén por lo menos 35 puntos en total en hábitat (H)"
-                }
-            ]
-        },
-        {
-            "cards": ["A", "D", "A", "D", "A"],
-            "score": 100,
-            "extra": [
-                {
-                    "en": "Score at least 5 points in :nature:",
-                    "es": "Obtén por lo menos 5 puntos en :nature:"
-                },
-                {
-                    "en": "Score at least 7 points in 3 different habitats",
-                    "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
-                },
-                {
-                    "en": "Score at least 20 in 2 different animals",
-                    "es": "Obtén por lo menos 20 puntos en 2 animales distintos"
-                }
-            ]
-        }
-    ],
-    "normal_achievements": [
-        {
-            "en": "Score 80+ points",
-            "es": "Puntúa 80 puntos o más"
-        },
-        {
-            "en": "Score 85+ points",
-            "es": "Puntúa 85 puntos o más"
-        },
-        {
-            "en": "Score 90+ points",
-            "es": "Puntúa 90 puntos o más"
-        },
-        {
-            "en": "Score 95+ points",
-            "es": "Puntúa 95 puntos o más"
-        },
-        {
-            "en": "Score 100+ points",
-            "es": "Puntúa 100 puntos o más"
-        },
-        {
-            "en": "Score 105+ points",
-            "es": "Puntúa 105 puntos o más"
-        },
-        {
-            "en": "Score 110+ points",
-            "es": "Puntúa 110 puntos o más"
-        },
-        {
-            "en": "Have no :nature: left",
-            "es": "Termina sin :nature:"
-        },
-        {
-            "en": "Have no :bear:",
-            "es": "Termina sin :bear:"
-        },
-        {
-            "en": "Have no :elk:",
-            "es": "Termina sin :elk:"
-        },
-        {
-            "en": "Have no :salmon:",
-            "es": "Termina sin :salmon:"
-        },
-        {
-            "en": "Have no :hawk:",
-            "es": "Termina sin :hawk:"
-        },
-        {
-            "en": "Have no :fox:",
-            "es": "Termina sin :fox:"
-        },
-        {
-            "en": "Have no more than 10 of a single Wildlife",
-            "es": "Ten 10 o más fichas de un tipo de fauna"
-        },
-        {
-            "en": "Win majority for 3 Habitats",
-            "es": "Gana la mayoría en 3 Hábitats"
-        },
-        {
-            "en": "Score 5+ points for all Habitats",
-            "es": "Puntúa 5 o más en todos los Hábitats"
-        },
-        {
-            "en": "Score 12+ points for a single Habitat",
-            "es": "Puntúa 12 o más en un solo Hábitat"
-        },
-        {
-            "en": "Score 15+ points for a single Habitat",
-            "es": "Puntúa 15 o más en un solo Hábitat"
-        },
-        {
-            "en": "Score 10+ points for each Wildlife",
-            "es": "Puntúa 10 o más por cada tipo de fauna"
-        },
-        {
-            "en": "Score 20+ points for two Wildlife",
-            "es": "Puntúa 20 o más con dos tipos de fauna"
-        },
-        {
-            "en": "Score 30+ points for a single Wildlife",
-            "es": "Puntúa 30 o más en un tipo de fauna"
-        },
-        {
-            "en": "End the game with 5+ :nature:",
-            "es": "Termina con 5 o más :nature:"
-        },
-        {
-            "en": "End the game with 10+ :nature:",
-            "es": "Termina con 10 o más :nature:"
-        },
-        {
-            "en": "Have no completed Keystone Habitats",
-            "es": "Termina sin ecosistemas claves completos"
-        },
-        {
-            "en": "Only have 3 types of Wildlife",
-            "es": "Termina con solo 3 tipos de fauna"
-        }
-    ],
-    "restrictions": [
-        {
-            "en": "At least one Habitat must match when placing tiles",
-            "es": "Al menos un Hábitat debe coincidir al colocar losetas"
-        },
-        {
-            "en": "No matching Habitats may touch when placing tiles (Note: ignore Habitat scoring this time)",
-            "es": "Los Hábitats no pueden coincidir al colocar losetas (Nota: ignora la puntuación de Hábitats en esta partida)"
-        },
-        {
-            "en": "Habitat Scoring change: All Habitat corridors of exactly three count for 3 points each.",
-            "es": "Cambio de puntuación de Hábitats: cada superficie de Hábitat de exactamente tres losetas da 3 puntos"
-        },
-        {
-            "en": "Habitat Scoring change: Habitat corridors must be 5+ in size to score",
-            "es": "Cambio en la puntuación de Hábitats: las superficies de Hábitats deben ser de tamaño 5 o más para puntuar"
-        },
-        {
-            "en": "Play with a display of only three pairs of tiles/tokens",
-            "es": "Juega con un despliegue de solo tres pares de losetas/fichas de fauna salvaje en lugar de cuatro"
-        },
-        {
-            "en": "Play with two sets of Wildlife Scoring Cards - players each choose which of the two they wish to score",
-            "es": "Juega con dos grupos de cartas de puntuación de fauna salvaje, los jugadores eligen con cuál puntuar"
-        },
-        {
-            "en": "Do not use Starter Habitat Tiles. Instead, each player's environments starts with two random Habitat Tiles",
-            "es": "No utilices losetas de Hábitat inicial. El entorno de cada jugador comienza con dos losetas de Hábitat al azar"
-        },
-        {
-            "en": "Two Nature Token are required to take a Nature Token Action",
-            "es": "Se necesitan dos fichas de naturaleza para realizar una acción de ficha de naturaleza"
-        },
-        {
-            "en": "You may not place the Wildlife Token on the Habitat Tile you just placed",
-            "es": "No puedes situar la ficha de fauna salvaje en la loseta de Hábitat que acabas de colocar"
-        },
-        {
-            "en": "Play with revealing scoring cards - each player starts the game with one of the five Wildlife Scoring Cards in their hand (secret), and any remaining are public on the table. When you play a Nature Token, reveal you scoring card by placing it face-up on the table",
-            "es": "Revelando cartas de puntuación. Cada jugador comienza la partida con una de las cinco cartas de puntuación de fauna salvaje en su mano (secreta), y las restantes son visibles para todos los jugadores en la mesa. Cuando juegues una ficha de naturaleza, revela tu carta de puntuación poniéndola bocarriba en la mesa"
-        }
-    ]
+    "base": {
+        "scenarios": [
+            {
+                "cards": [
+                    "A",
+                    "A",
+                    "A",
+                    "A",
+                    "A"
+                ],
+                "score": 80,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "B",
+                    "B",
+                    "B",
+                    "B",
+                    "B"
+                ],
+                "score": 80,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "C",
+                    "C",
+                    "C",
+                    "C",
+                    "C"
+                ],
+                "score": 80,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "D",
+                    "D",
+                    "D",
+                    "D",
+                    "D"
+                ],
+                "score": 85,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "C",
+                    "D",
+                    "B",
+                    "B",
+                    "B"
+                ],
+                "score": 85,
+                "extra": [
+                    {
+                        "en": "Fully score :fox: 3 times",
+                        "es": "Puntúa :fox: completamente 3 veces"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "D",
+                    "B",
+                    "C",
+                    "C",
+                    "B"
+                ],
+                "score": 85,
+                "extra": [
+                    {
+                        "en": "Play at least 4 of every animal",
+                        "es": "Juega por lo menos 4 de cada animal"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "B",
+                    "C",
+                    "C",
+                    "D",
+                    "C"
+                ],
+                "score": 90,
+                "extra": [
+                    {
+                        "en": "Score at least 20 points in :hawk:",
+                        "es": "Obtén por lo menos 20 puntos en :hawk:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "C",
+                    "B",
+                    "B",
+                    "A",
+                    "D"
+                ],
+                "score": 90,
+                "extra": [
+                    {
+                        "en": "Score at least 5 points in :nature:",
+                        "es": "Obtén por lo menos 5 puntos en :nature:"
+                    },
+                    {
+                        "en": "Don't place a :bear: next to an :elk:",
+                        "es": "No pongas un :bear: adyacente a un :elk:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "C",
+                    "A",
+                    "D",
+                    "C",
+                    "B"
+                ],
+                "score": 90,
+                "extra": [
+                    {
+                        "en": "Score at least 10 in every animal",
+                        "es": "Obtén por lo menos 10 puntos en cada animal"
+                    },
+                    {
+                        "en": "Score at least 5 in every habitat",
+                        "es": "Obtén por lo menos 5 puntos en cada hábitat"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "C",
+                    "B",
+                    "D",
+                    "B",
+                    "B"
+                ],
+                "score": 95,
+                "extra": [
+                    {
+                        "en": "Score at least 60 in wild life (W)",
+                        "es": "Obtén por lo menos 60 puntos en vida salvaje (F)"
+                    },
+                    {
+                        "en": "Score at least 7 points in 3 different habitats",
+                        "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "B",
+                    "A",
+                    "A",
+                    "C",
+                    "A"
+                ],
+                "score": 95,
+                "extra": [
+                    {
+                        "en": "Score at least 30 points in :bear:",
+                        "es": "Obtén por lo menos 30 puntos en :bear:"
+                    },
+                    {
+                        "en": "Don't play a :forest: next to a :river:",
+                        "es": "No juegues un :forest: adyacente a un :river:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "A",
+                    "B",
+                    "A",
+                    "A",
+                    "C"
+                ],
+                "score": 95,
+                "extra": [
+                    {
+                        "en": "Fully score 1 :salmon:",
+                        "es": "Puntúa :salmon: completamente 1 vez"
+                    },
+                    {
+                        "en": "Don't play an :elk: in a :forest:",
+                        "es": "No juegues un :elk: en un :forest:"
+                    },
+                    {
+                        "en": "Score at least 12 in 1 habitat",
+                        "es": "Obtén por lo menos 12 puntos en 1 hábitat"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "D",
+                    "C",
+                    "C",
+                    "B",
+                    "C"
+                ],
+                "score": 100,
+                "extra": [
+                    {
+                        "en": "Fully score 1 :elk:",
+                        "es": "Puntúa :elk: completamente 1 vez"
+                    },
+                    {
+                        "en": "Play at least 5 :hawk:",
+                        "es": "Juega por lo menos 5 :hawk:"
+                    },
+                    {
+                        "en": ":hawk: must be played adyacent to :elk:",
+                        "es": ":hawk: debe jugarse adyacente a :elk:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "A",
+                    "C",
+                    "B",
+                    "A",
+                    "D"
+                ],
+                "score": 100,
+                "extra": [
+                    {
+                        "en": "Don't play a :mountain: next to a :prairie:",
+                        "es": "No juegues una :mountain: adyacente a un :prairie:"
+                    },
+                    {
+                        "en": "Don't play a :wetland: next to a :river:",
+                        "es": "No juegues un :wetland: adyacente a un :river:"
+                    },
+                    {
+                        "en": "Score at least 35 in total in habitat (H)",
+                        "es": "Obtén por lo menos 35 puntos en total en hábitat (H)"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "A",
+                    "D",
+                    "A",
+                    "D",
+                    "A"
+                ],
+                "score": 100,
+                "extra": [
+                    {
+                        "en": "Score at least 5 points in :nature:",
+                        "es": "Obtén por lo menos 5 puntos en :nature:"
+                    },
+                    {
+                        "en": "Score at least 7 points in 3 different habitats",
+                        "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
+                    },
+                    {
+                        "en": "Score at least 20 in 2 different animals",
+                        "es": "Obtén por lo menos 20 puntos en 2 animales distintos"
+                    }
+                ]
+            }
+        ],
+        "normal_achievements": [
+            {
+                "en": "Score 80+ points",
+                "es": "Puntúa 80 puntos o más"
+            },
+            {
+                "en": "Score 85+ points",
+                "es": "Puntúa 85 puntos o más"
+            },
+            {
+                "en": "Score 90+ points",
+                "es": "Puntúa 90 puntos o más"
+            },
+            {
+                "en": "Score 95+ points",
+                "es": "Puntúa 95 puntos o más"
+            },
+            {
+                "en": "Score 100+ points",
+                "es": "Puntúa 100 puntos o más"
+            },
+            {
+                "en": "Score 105+ points",
+                "es": "Puntúa 105 puntos o más"
+            },
+            {
+                "en": "Score 110+ points",
+                "es": "Puntúa 110 puntos o más"
+            },
+            {
+                "en": "Have no :nature: left",
+                "es": "Termina sin :nature:"
+            },
+            {
+                "en": "Have no :bear:",
+                "es": "Termina sin :bear:"
+            },
+            {
+                "en": "Have no :elk:",
+                "es": "Termina sin :elk:"
+            },
+            {
+                "en": "Have no :salmon:",
+                "es": "Termina sin :salmon:"
+            },
+            {
+                "en": "Have no :hawk:",
+                "es": "Termina sin :hawk:"
+            },
+            {
+                "en": "Have no :fox:",
+                "es": "Termina sin :fox:"
+            },
+            {
+                "en": "Have no more than 10 of a single Wildlife",
+                "es": "Ten 10 o más fichas de un tipo de fauna"
+            },
+            {
+                "en": "Win majority for 3 Habitats",
+                "es": "Gana la mayoría en 3 Hábitats"
+            },
+            {
+                "en": "Score 5+ points for all Habitats",
+                "es": "Puntúa 5 o más en todos los Hábitats"
+            },
+            {
+                "en": "Score 12+ points for a single Habitat",
+                "es": "Puntúa 12 o más en un solo Hábitat"
+            },
+            {
+                "en": "Score 15+ points for a single Habitat",
+                "es": "Puntúa 15 o más en un solo Hábitat"
+            },
+            {
+                "en": "Score 10+ points for each Wildlife",
+                "es": "Puntúa 10 o más por cada tipo de fauna"
+            },
+            {
+                "en": "Score 20+ points for two Wildlife",
+                "es": "Puntúa 20 o más con dos tipos de fauna"
+            },
+            {
+                "en": "Score 30+ points for a single Wildlife",
+                "es": "Puntúa 30 o más en un tipo de fauna"
+            },
+            {
+                "en": "End the game with 5+ :nature:",
+                "es": "Termina con 5 o más :nature:"
+            },
+            {
+                "en": "End the game with 10+ :nature:",
+                "es": "Termina con 10 o más :nature:"
+            },
+            {
+                "en": "Have no completed Keystone Habitats",
+                "es": "Termina sin ecosistemas claves completos"
+            },
+            {
+                "en": "Only have 3 types of Wildlife",
+                "es": "Termina con solo 3 tipos de fauna"
+            }
+        ],
+        "restrictions": [
+            {
+                "en": "At least one Habitat must match when placing tiles",
+                "es": "Al menos un Hábitat debe coincidir al colocar losetas"
+            },
+            {
+                "en": "No matching Habitats may touch when placing tiles (Note: ignore Habitat scoring this time)",
+                "es": "Los Hábitats no pueden coincidir al colocar losetas (Nota: ignora la puntuación de Hábitats en esta partida)"
+            },
+            {
+                "en": "Habitat Scoring change: All Habitat corridors of exactly three count for 3 points each.",
+                "es": "Cambio de puntuación de Hábitats: cada superficie de Hábitat de exactamente tres losetas da 3 puntos"
+            },
+            {
+                "en": "Habitat Scoring change: Habitat corridors must be 5+ in size to score",
+                "es": "Cambio en la puntuación de Hábitats: las superficies de Hábitats deben ser de tamaño 5 o más para puntuar"
+            },
+            {
+                "en": "Play with a display of only three pairs of tiles/tokens",
+                "es": "Juega con un despliegue de solo tres pares de losetas/fichas de fauna salvaje en lugar de cuatro"
+            },
+            {
+                "en": "Play with two sets of Wildlife Scoring Cards - players each choose which of the two they wish to score",
+                "es": "Juega con dos grupos de cartas de puntuación de fauna salvaje, los jugadores eligen con cuál puntuar"
+            },
+            {
+                "en": "Do not use Starter Habitat Tiles. Instead, each player's environments starts with two random Habitat Tiles",
+                "es": "No utilices losetas de Hábitat inicial. El entorno de cada jugador comienza con dos losetas de Hábitat al azar"
+            },
+            {
+                "en": "Two Nature Token are required to take a Nature Token Action",
+                "es": "Se necesitan dos fichas de naturaleza para realizar una acción de ficha de naturaleza"
+            },
+            {
+                "en": "You may not place the Wildlife Token on the Habitat Tile you just placed",
+                "es": "No puedes situar la ficha de fauna salvaje en la loseta de Hábitat que acabas de colocar"
+            },
+            {
+                "en": "Play with revealing scoring cards - each player starts the game with one of the five Wildlife Scoring Cards in their hand (secret), and any remaining are public on the table. When you play a Nature Token, reveal you scoring card by placing it face-up on the table",
+                "es": "Revelando cartas de puntuación. Cada jugador comienza la partida con una de las cinco cartas de puntuación de fauna salvaje en su mano (secreta), y las restantes son visibles para todos los jugadores en la mesa. Cuando juegues una ficha de naturaleza, revela tu carta de puntuación poniéndola bocarriba en la mesa"
+            }
+        ]
+    },
+    "landmarks": {
+        "scenarios": [
+            {
+                "cards": [
+                    "Z",
+                    "Z",
+                    "Z",
+                    "Z",
+                    "Z"
+                ],
+                "score": 80,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "B",
+                    "B",
+                    "B",
+                    "B",
+                    "B"
+                ],
+                "score": 80,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "C",
+                    "C",
+                    "C",
+                    "C",
+                    "C"
+                ],
+                "score": 80,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "D",
+                    "D",
+                    "D",
+                    "D",
+                    "D"
+                ],
+                "score": 85,
+                "extra": []
+            },
+            {
+                "cards": [
+                    "C",
+                    "D",
+                    "B",
+                    "B",
+                    "B"
+                ],
+                "score": 85,
+                "extra": [
+                    {
+                        "en": "Fully score :fox: 3 times",
+                        "es": "Puntúa :fox: completamente 3 veces"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "D",
+                    "B",
+                    "C",
+                    "C",
+                    "B"
+                ],
+                "score": 85,
+                "extra": [
+                    {
+                        "en": "Play at least 4 of every animal",
+                        "es": "Juega por lo menos 4 de cada animal"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "B",
+                    "C",
+                    "C",
+                    "D",
+                    "C"
+                ],
+                "score": 90,
+                "extra": [
+                    {
+                        "en": "Score at least 20 points in :hawk:",
+                        "es": "Obtén por lo menos 20 puntos en :hawk:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "C",
+                    "B",
+                    "B",
+                    "A",
+                    "D"
+                ],
+                "score": 90,
+                "extra": [
+                    {
+                        "en": "Score at least 5 points in :nature:",
+                        "es": "Obtén por lo menos 5 puntos en :nature:"
+                    },
+                    {
+                        "en": "Don't place a :bear: next to an :elk:",
+                        "es": "No pongas un :bear: adyacente a un :elk:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "C",
+                    "A",
+                    "D",
+                    "C",
+                    "B"
+                ],
+                "score": 90,
+                "extra": [
+                    {
+                        "en": "Score at least 10 in every animal",
+                        "es": "Obtén por lo menos 10 puntos en cada animal"
+                    },
+                    {
+                        "en": "Score at least 5 in every habitat",
+                        "es": "Obtén por lo menos 5 puntos en cada hábitat"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "C",
+                    "B",
+                    "D",
+                    "B",
+                    "B"
+                ],
+                "score": 95,
+                "extra": [
+                    {
+                        "en": "Score at least 60 in wild life (W)",
+                        "es": "Obtén por lo menos 60 puntos en vida salvaje (F)"
+                    },
+                    {
+                        "en": "Score at least 7 points in 3 different habitats",
+                        "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "B",
+                    "A",
+                    "A",
+                    "C",
+                    "A"
+                ],
+                "score": 95,
+                "extra": [
+                    {
+                        "en": "Score at least 30 points in :bear:",
+                        "es": "Obtén por lo menos 30 puntos en :bear:"
+                    },
+                    {
+                        "en": "Don't play a :forest: next to a :river:",
+                        "es": "No juegues un :forest: adyacente a un :river:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "A",
+                    "B",
+                    "A",
+                    "A",
+                    "C"
+                ],
+                "score": 95,
+                "extra": [
+                    {
+                        "en": "Fully score 1 :salmon:",
+                        "es": "Puntúa :salmon: completamente 1 vez"
+                    },
+                    {
+                        "en": "Don't play an :elk: in a :forest:",
+                        "es": "No juegues un :elk: en un :forest:"
+                    },
+                    {
+                        "en": "Score at least 12 in 1 habitat",
+                        "es": "Obtén por lo menos 12 puntos en 1 hábitat"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "D",
+                    "C",
+                    "C",
+                    "B",
+                    "C"
+                ],
+                "score": 100,
+                "extra": [
+                    {
+                        "en": "Fully score 1 :elk:",
+                        "es": "Puntúa :elk: completamente 1 vez"
+                    },
+                    {
+                        "en": "Play at least 5 :hawk:",
+                        "es": "Juega por lo menos 5 :hawk:"
+                    },
+                    {
+                        "en": ":hawk: must be played adyacent to :elk:",
+                        "es": ":hawk: debe jugarse adyacente a :elk:"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "A",
+                    "C",
+                    "B",
+                    "A",
+                    "D"
+                ],
+                "score": 100,
+                "extra": [
+                    {
+                        "en": "Don't play a :mountain: next to a :prairie:",
+                        "es": "No juegues una :mountain: adyacente a un :prairie:"
+                    },
+                    {
+                        "en": "Don't play a :wetland: next to a :river:",
+                        "es": "No juegues un :wetland: adyacente a un :river:"
+                    },
+                    {
+                        "en": "Score at least 35 in total in habitat (H)",
+                        "es": "Obtén por lo menos 35 puntos en total en hábitat (H)"
+                    }
+                ]
+            },
+            {
+                "cards": [
+                    "A",
+                    "D",
+                    "A",
+                    "D",
+                    "A"
+                ],
+                "score": 100,
+                "extra": [
+                    {
+                        "en": "Score at least 5 points in :nature:",
+                        "es": "Obtén por lo menos 5 puntos en :nature:"
+                    },
+                    {
+                        "en": "Score at least 7 points in 3 different habitats",
+                        "es": "Obtén por lo menos 7 puntos en 3 hábitats distintos"
+                    },
+                    {
+                        "en": "Score at least 20 in 2 different animals",
+                        "es": "Obtén por lo menos 20 puntos en 2 animales distintos"
+                    }
+                ]
+            }
+        ],
+        "normal_achievements": [
+            {
+                "en": "Score 80+ points",
+                "es": "Puntúa 80 puntos o más"
+            },
+            {
+                "en": "Score 85+ points",
+                "es": "Puntúa 85 puntos o más"
+            },
+            {
+                "en": "Score 90+ points",
+                "es": "Puntúa 90 puntos o más"
+            },
+            {
+                "en": "Score 95+ points",
+                "es": "Puntúa 95 puntos o más"
+            },
+            {
+                "en": "Score 100+ points",
+                "es": "Puntúa 100 puntos o más"
+            },
+            {
+                "en": "Score 105+ points",
+                "es": "Puntúa 105 puntos o más"
+            },
+            {
+                "en": "Score 110+ points",
+                "es": "Puntúa 110 puntos o más"
+            },
+            {
+                "en": "Have no :nature: left",
+                "es": "Termina sin :nature:"
+            },
+            {
+                "en": "Have no :bear:",
+                "es": "Termina sin :bear:"
+            },
+            {
+                "en": "Have no :elk:",
+                "es": "Termina sin :elk:"
+            },
+            {
+                "en": "Have no :salmon:",
+                "es": "Termina sin :salmon:"
+            },
+            {
+                "en": "Have no :hawk:",
+                "es": "Termina sin :hawk:"
+            },
+            {
+                "en": "Have no :fox:",
+                "es": "Termina sin :fox:"
+            },
+            {
+                "en": "Have no more than 10 of a single Wildlife",
+                "es": "Ten 10 o más fichas de un tipo de fauna"
+            },
+            {
+                "en": "Win majority for 3 Habitats",
+                "es": "Gana la mayoría en 3 Hábitats"
+            },
+            {
+                "en": "Score 5+ points for all Habitats",
+                "es": "Puntúa 5 o más en todos los Hábitats"
+            },
+            {
+                "en": "Score 12+ points for a single Habitat",
+                "es": "Puntúa 12 o más en un solo Hábitat"
+            },
+            {
+                "en": "Score 15+ points for a single Habitat",
+                "es": "Puntúa 15 o más en un solo Hábitat"
+            },
+            {
+                "en": "Score 10+ points for each Wildlife",
+                "es": "Puntúa 10 o más por cada tipo de fauna"
+            },
+            {
+                "en": "Score 20+ points for two Wildlife",
+                "es": "Puntúa 20 o más con dos tipos de fauna"
+            },
+            {
+                "en": "Score 30+ points for a single Wildlife",
+                "es": "Puntúa 30 o más en un tipo de fauna"
+            },
+            {
+                "en": "End the game with 5+ :nature:",
+                "es": "Termina con 5 o más :nature:"
+            },
+            {
+                "en": "End the game with 10+ :nature:",
+                "es": "Termina con 10 o más :nature:"
+            },
+            {
+                "en": "Have no completed Keystone Habitats",
+                "es": "Termina sin ecosistemas claves completos"
+            },
+            {
+                "en": "Only have 3 types of Wildlife",
+                "es": "Termina con solo 3 tipos de fauna"
+            }
+        ],
+        "restrictions": [
+            {
+                "en": "At least one Habitat must match when placing tiles",
+                "es": "Al menos un Hábitat debe coincidir al colocar losetas"
+            },
+            {
+                "en": "No matching Habitats may touch when placing tiles (Note: ignore Habitat scoring this time)",
+                "es": "Los Hábitats no pueden coincidir al colocar losetas (Nota: ignora la puntuación de Hábitats en esta partida)"
+            },
+            {
+                "en": "Habitat Scoring change: All Habitat corridors of exactly three count for 3 points each.",
+                "es": "Cambio de puntuación de Hábitats: cada superficie de Hábitat de exactamente tres losetas da 3 puntos"
+            },
+            {
+                "en": "Habitat Scoring change: Habitat corridors must be 5+ in size to score",
+                "es": "Cambio en la puntuación de Hábitats: las superficies de Hábitats deben ser de tamaño 5 o más para puntuar"
+            },
+            {
+                "en": "Play with a display of only three pairs of tiles/tokens",
+                "es": "Juega con un despliegue de solo tres pares de losetas/fichas de fauna salvaje en lugar de cuatro"
+            },
+            {
+                "en": "Play with two sets of Wildlife Scoring Cards - players each choose which of the two they wish to score",
+                "es": "Juega con dos grupos de cartas de puntuación de fauna salvaje, los jugadores eligen con cuál puntuar"
+            },
+            {
+                "en": "Do not use Starter Habitat Tiles. Instead, each player's environments starts with two random Habitat Tiles",
+                "es": "No utilices losetas de Hábitat inicial. El entorno de cada jugador comienza con dos losetas de Hábitat al azar"
+            },
+            {
+                "en": "Two Nature Token are required to take a Nature Token Action",
+                "es": "Se necesitan dos fichas de naturaleza para realizar una acción de ficha de naturaleza"
+            },
+            {
+                "en": "You may not place the Wildlife Token on the Habitat Tile you just placed",
+                "es": "No puedes situar la ficha de fauna salvaje en la loseta de Hábitat que acabas de colocar"
+            },
+            {
+                "en": "Play with revealing scoring cards - each player starts the game with one of the five Wildlife Scoring Cards in their hand (secret), and any remaining are public on the table. When you play a Nature Token, reveal you scoring card by placing it face-up on the table",
+                "es": "Revelando cartas de puntuación. Cada jugador comienza la partida con una de las cinco cartas de puntuación de fauna salvaje en su mano (secreta), y las restantes son visibles para todos los jugadores en la mesa. Cuando juegues una ficha de naturaleza, revela tu carta de puntuación poniéndola bocarriba en la mesa"
+            }
+        ]
+    }
 }

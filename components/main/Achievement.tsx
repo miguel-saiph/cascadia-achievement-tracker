@@ -3,26 +3,23 @@ import DataManager from "@/data/DataManager";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { View, StyleSheet, Platform, useWindowDimensions } from "react-native";
-import localization from '@/data/Localization.json';
-import { ILoc } from "./Info";
 import { useTaskContext } from "@/hooks/configContext";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { TextWithIcons } from "./TextWithIcons";
 
-export default function Achievement({ info, index, callback }: { info: any, index: number, callback: Function }) {
+export default function Achievement({ info, index, type }: { info: any, index: number, type: 'normal' | 'restriction' }) {
     const [completed, onChangeCompleted] = React.useState(false);
     const { width: windowWidth } = useWindowDimensions();
     const lang = useTaskContext().lang;
-    const texts: ILoc = localization;
 
-    // const onChangeScenarioState = (complete: boolean): void => {
-    //     DataManager.instance.setScenarioCompletedState(index, complete);
-    //     onChangeCompleted(complete);
-    // }
+    const onChangeAchevementState = (complete: boolean): void => {
+        DataManager.instance.setAchievementCompletedState(index, type, complete);
+        onChangeCompleted(complete);
+    }
 
-    // useEffect(() => {
-    //     onChangeCompleted(DataManager.instance.isScenarioCompleted(index));
-    // }, []);
+    useEffect(() => {
+        onChangeCompleted(DataManager.instance.getAchievementState(index, type));
+    }, []);
 
     return (
         <View style={
@@ -58,10 +55,10 @@ export default function Achievement({ info, index, callback }: { info: any, inde
                                 innerIconStyle={{ borderWidth: 3 }}
                                 disableText={true}
                                 // disabled={completed}
-                                // isChecked={completed}
+                                isChecked={completed}
                                 onPress={
                                     (isChecked: boolean) => {
-                                        // onChangeScenarioState(isChecked);
+                                        onChangeAchevementState(isChecked);
                                     }}
                             />
                         </View>

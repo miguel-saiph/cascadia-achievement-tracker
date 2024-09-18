@@ -8,7 +8,7 @@ import {
     Platform
 } from 'react-native';
 
-import data from '@/data/AchievementsData.json';
+import externalData from '@/data/AchievementsData.json';
 import DataManager from '@/data/DataManager';
 import { ILoc, Info } from '@/components/main/Info';
 import { MedalsCount } from '@/components/main/MedalsCount';
@@ -16,6 +16,8 @@ import { useTaskContext } from '@/hooks/configContext';
 import localization from '@/data/Localization.json';
 import Achievement from '@/components/main/Achievement';
 import MainScreen from '@/components/main/MainScreensLayout';
+
+const data: any = externalData;
 
 export default function NormalGame({ navigation }: any) {
     let scrollX = useRef(new Animated.Value(0)).current;
@@ -28,9 +30,10 @@ export default function NormalGame({ navigation }: any) {
     const [currentMedals, setCurrentMedals] = useState(0);
     const lang = useTaskContext().lang;
     const texts: ILoc = localization;
+    const [currentMode, setCurrentMode] = useState('base');
 
     useEffect(() => {
-        // refScrollView.current.scrollTo({x: xCoords[2], animated: false});
+        setCurrentMode(DataManager.instance.getCurrentMode());
         updateCurrentMedals();
         setTimeout(() => {
             Animated.timing(fadeAnim, {
@@ -46,10 +49,6 @@ export default function NormalGame({ navigation }: any) {
     }, [loaded, refScrollView]);
 
     const handleScroll = (event: any) => {
-        const index: number = xCoords.indexOf((scrollX as any).__getValue(), 0);
-        if (index !== -1) {
-            DataManager.instance.setLastScenario(index);
-        }
     };
 
     const updateCurrentMedals = () => {
@@ -89,10 +88,10 @@ export default function NormalGame({ navigation }: any) {
                             }
                         }>
 
-                        {(data.normal_achievements).map((text, index) => {
+                        {data[currentMode].normal_achievements.map((text: string, index: number) => {
                             return (
                                 <View key={index}>
-                                    <Achievement info={text} index={index} callback={() => { }} />
+                                    <Achievement info={text} index={index} type={'normal'} />
                                 </View>
                             );
                         })}

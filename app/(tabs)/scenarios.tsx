@@ -14,7 +14,7 @@ import {
     Platform
 } from 'react-native';
 
-import data from '@/data/AchievementsData.json';
+import externalData from '@/data/AchievementsData.json';
 import { IAnimalInfo } from '@/components/main/CardNames';
 import DataManager from '@/data/DataManager';
 import { Info } from '@/components/main/Info';
@@ -30,6 +30,8 @@ export interface IScenario {
     }[]
 }
 
+const data: any = externalData;
+
 export default function Scenarios({ navigation }: any) {
     let scrollX = useRef(new Animated.Value(0)).current;
     const [xCoords, setXCoords] = useState([] as number[]);
@@ -39,9 +41,10 @@ export default function Scenarios({ navigation }: any) {
     const { width: windowWidth } = useWindowDimensions();
     const [fadeAnim] = useState(new Animated.Value(1));
     const [currentMedals, setCurrentMedals] = useState(0);
+    const [currentMode, setCurrentMode] = useState('base');
 
     useEffect(() => {
-        // refScrollView.current.scrollTo({x: xCoords[2], animated: false});
+        setCurrentMode(DataManager.instance.getCurrentMode());
         updateCurrentMedals();
         setTimeout(() => {
             Animated.timing(fadeAnim, {
@@ -57,10 +60,10 @@ export default function Scenarios({ navigation }: any) {
     }, [loaded, refScrollView]);
 
     const handleScroll = (event: any) => {
-        const index: number = xCoords.indexOf((scrollX as any).__getValue(), 0);
-        if (index !== -1) {
-            DataManager.instance.setLastScenario(index);
-        }
+        // const index: number = xCoords.indexOf((scrollX as any).__getValue(), 0);
+        // if (index !== -1) {
+        //     DataManager.instance.setLastScenario(index);
+        // }
     };
 
     const updateCurrentMedals = () => {
@@ -88,7 +91,7 @@ export default function Scenarios({ navigation }: any) {
                         })
                     }
                     scrollEventThrottle={1}>
-                    {data.scenarios.map((scenario, index) => {
+                    {data[currentMode].scenarios.map((scenario: IScenario, index: number) => {
                         return (
                             <View
                                 style={{
@@ -101,13 +104,10 @@ export default function Scenarios({ navigation }: any) {
                                     event => {
                                         const layout = event.nativeEvent.layout;
                                         xCoords[index] = layout.x;
-                                        if (index >= data.scenarios.length - 1) {
+                                        if (index >= data[currentMode].scenarios.length - 1) {
                                             setLoaded(true);
                                         }
                                     }
-                                }
-                                onPointerEnterCapture={
-                                    () => { DataManager.instance.setLastScenario(index) }
                                 }>
 
                                 <Card scenario={scenario as unknown as IScenario} index={index} callback={updateCurrentMedals} />
