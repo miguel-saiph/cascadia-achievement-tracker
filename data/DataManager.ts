@@ -126,6 +126,20 @@ export default class DataManager {
         return this.storageData.data[this.storageData.currentMode].scenarios[id].completed;
     }
 
+    public getTotalScenarios(): number {
+        return this.storageData.data[this.storageData.currentMode].scenarios.length;
+    }
+
+    public getCompletedScenariosCount(): number {
+        let count: number = 0;
+        for (let i: number = 0; i < this.getTotalScenarios() - 1; i++) {
+            if (this.storageData.data[this.storageData.currentMode].scenarios[i].completed) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
     public setAchievementCompletedState(id: number, type: 'normal' | 'restriction', completed: boolean): void {
         if (type === 'normal') {
             this.storageData.data[this.storageData.currentMode].normal[id].completed = completed;
@@ -142,6 +156,33 @@ export default class DataManager {
             return this.storageData.data[this.storageData.currentMode].restrictions[id].completed;
         }
         return false;
+    }
+
+    public getTotalAchievements(type: 'normal' | 'restriction'): number {
+        if (type === 'normal') {
+            return this.storageData.data[this.storageData.currentMode].normal.length;
+        } else {
+            return this.storageData.data[this.storageData.currentMode].restrictions.length;
+        }
+    }
+
+    public getCompletedAchievementsCount(type: 'normal' | 'restriction'): number {
+        let count: number = 0;
+        if (type === 'normal') {
+            for (let i: number = 0; i < this.getTotalAchievements(type) - 1; i++) {
+                if (this.storageData.data[this.storageData.currentMode].normal[i].completed) {
+                    count += 1;
+                }
+            }
+        } else {
+            for (let i: number = 0; i < this.getTotalAchievements(type) - 1; i++) {
+                if (this.storageData.data[this.storageData.currentMode].restrictions[i].completed) {
+                    count += 1;
+                }
+            }
+        }
+        return count;
+        
     }
 
     public setCurrentMode(mode: 'base' | 'landmarks'): void {

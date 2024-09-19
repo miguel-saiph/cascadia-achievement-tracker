@@ -1,8 +1,13 @@
 import { StyleSheet, Image, Platform, SafeAreaView, ImageBackground, View, Animated } from 'react-native';
 import { Info } from './Info';
-import { MedalsCount } from './MedalsCount';
+import { AchievementsCount } from './AchievementsCount';
 
-export default function MainScreen({ children }: any) {
+interface IAchievementsCount {
+    current: number,
+    total: number
+}
+
+export default function MainScreen({ children, data }: {children: any, data: IAchievementsCount}) {
     return (
         <SafeAreaView style={styles.container}>
             <ImageBackground source={require('@/assets/images/background.jpg')} style={{
@@ -16,7 +21,7 @@ export default function MainScreen({ children }: any) {
                 <View style={{ height: 80 }} />
                 <View style={styles.topBarContainer}>
                     <Info />
-                    <MedalsCount current={10} />
+                    <AchievementsCount current={data.current} total={data.total} />
                 </View>
 
                 {children}

@@ -38,6 +38,7 @@ export default function Card({ scenario, index, callback }: { scenario: IScenari
     const onChangeScenarioState = (complete: boolean): void => {
         DataManager.instance.setScenarioCompletedState(index, complete);
         onChangeCompleted(complete);
+        callback();
     }
 
     useEffect(() => {

@@ -23,13 +23,17 @@ export default function Restrictions({ navigation }: any) {
     const refScrollView = useRef(null);
     const { width: windowWidth } = useWindowDimensions();
     const [fadeAnim] = useState(new Animated.Value(1));
-    const [currentMedals, setCurrentMedals] = useState(0);
     const [currentMode, setCurrentMode] = useState('base');
+    const [currentCompletedAchievements, setCurrentCompletedAchievements] = useState(0);
 
     useEffect(() => {
         setCurrentMode(DataManager.instance.getCurrentMode());
-        // updateCurrentMedals();
+        updateCurrentAchievementsCount();
     }, []);
+
+    const updateCurrentAchievementsCount = () => {
+        setCurrentCompletedAchievements(DataManager.instance.getCompletedAchievementsCount('restriction'));
+    };
 
     return (
         <MainScreen children={
@@ -67,7 +71,7 @@ export default function Restrictions({ navigation }: any) {
                         {(data[currentMode].restrictions).map((text:string, index: number) => {
                             return (
                                 <View key={index}>
-                                    <Achievement info={text} index={index} type={'restriction'} />
+                                    <Achievement info={text} index={index} type={'restriction'} callback={updateCurrentAchievementsCount} />
                                 </View>
                             );
                         })}
@@ -75,7 +79,10 @@ export default function Restrictions({ navigation }: any) {
                     <View style={{ height: 80 }} />
                 </ScrollView>
             </View>
-        }>
+        } data={{
+            current: currentCompletedAchievements,
+            total: DataManager.instance.getTotalAchievements('restriction')
+        }}>
         </MainScreen>
     );
 };

@@ -18,7 +18,7 @@ import externalData from '@/data/AchievementsData.json';
 import { IAnimalInfo } from '@/components/main/CardNames';
 import DataManager from '@/data/DataManager';
 import { Info } from '@/components/main/Info';
-import { MedalsCount } from '@/components/main/MedalsCount';
+import { AchievementsCount } from '@/components/main/AchievementsCount';
 import { ScenarioNumber } from '@/components/main/ScenarioNumber';
 import MainScreen from '@/components/main/MainScreensLayout';
 
@@ -40,12 +40,12 @@ export default function Scenarios({ navigation }: any) {
     const refScrollView = useRef(null);
     const { width: windowWidth } = useWindowDimensions();
     const [fadeAnim] = useState(new Animated.Value(1));
-    const [currentMedals, setCurrentMedals] = useState(0);
+    const [currentCompletedScenarios, setCurrentCompletedScenarios] = useState(0);
     const [currentMode, setCurrentMode] = useState('base');
 
     useEffect(() => {
         setCurrentMode(DataManager.instance.getCurrentMode());
-        updateCurrentMedals();
+        updateCurrentScenariosCount();
         setTimeout(() => {
             Animated.timing(fadeAnim, {
                 toValue: 0,
@@ -66,8 +66,8 @@ export default function Scenarios({ navigation }: any) {
         // }
     };
 
-    const updateCurrentMedals = () => {
-        setCurrentMedals(DataManager.instance.getGoldMedals());
+    const updateCurrentScenariosCount = () => {
+        setCurrentCompletedScenarios(DataManager.instance.getCompletedScenariosCount());
     };
 
     return (
@@ -110,8 +110,7 @@ export default function Scenarios({ navigation }: any) {
                                     }
                                 }>
 
-                                <Card scenario={scenario as unknown as IScenario} index={index} callback={updateCurrentMedals} />
-                                {/* <ScenarioNumber number={index + 1} /> */}
+                                <Card scenario={scenario as unknown as IScenario} index={index} callback={updateCurrentScenariosCount} />
                             </View>
                         );
                     })}
@@ -119,7 +118,10 @@ export default function Scenarios({ navigation }: any) {
                 </ScrollView>
 
             </View>
-        }>
+        } data={{
+            current: currentCompletedScenarios,
+            total: DataManager.instance.getTotalScenarios()
+        }}>
 
         </MainScreen>
     );

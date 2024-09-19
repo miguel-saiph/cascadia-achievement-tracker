@@ -11,7 +11,7 @@ import {
 import externalData from '@/data/AchievementsData.json';
 import DataManager from '@/data/DataManager';
 import { ILoc, Info } from '@/components/main/Info';
-import { MedalsCount } from '@/components/main/MedalsCount';
+import { AchievementsCount } from '@/components/main/AchievementsCount';
 import { useTaskContext } from '@/hooks/configContext';
 import localization from '@/data/Localization.json';
 import Achievement from '@/components/main/Achievement';
@@ -27,14 +27,14 @@ export default function NormalGame({ navigation }: any) {
     const refScrollView = useRef(null);
     const { width: windowWidth } = useWindowDimensions();
     const [fadeAnim] = useState(new Animated.Value(1));
-    const [currentMedals, setCurrentMedals] = useState(0);
     const lang = useTaskContext().lang;
     const texts: ILoc = localization;
     const [currentMode, setCurrentMode] = useState('base');
+    const [currentCompletedAchievements, setCurrentCompletedAchievements] = useState(0);
 
     useEffect(() => {
         setCurrentMode(DataManager.instance.getCurrentMode());
-        updateCurrentMedals();
+        updateCurrentAchievementsCount();
         setTimeout(() => {
             Animated.timing(fadeAnim, {
                 toValue: 0,
@@ -51,8 +51,8 @@ export default function NormalGame({ navigation }: any) {
     const handleScroll = (event: any) => {
     };
 
-    const updateCurrentMedals = () => {
-        setCurrentMedals(DataManager.instance.getGoldMedals());
+    const updateCurrentAchievementsCount = () => {
+        setCurrentCompletedAchievements(DataManager.instance.getCompletedAchievementsCount('normal'));
     };
 
     return (
@@ -91,7 +91,7 @@ export default function NormalGame({ navigation }: any) {
                         {data[currentMode].normal_achievements.map((text: string, index: number) => {
                             return (
                                 <View key={index}>
-                                    <Achievement info={text} index={index} type={'normal'} />
+                                    <Achievement info={text} index={index} type={'normal'} callback={updateCurrentAchievementsCount} />
                                 </View>
                             );
                         })}
@@ -99,7 +99,10 @@ export default function NormalGame({ navigation }: any) {
                     <View style={{ height: 80 }} />
                 </ScrollView>
             </View>
-        }>
+        } data={{
+            current: currentCompletedAchievements,
+            total: DataManager.instance.getTotalAchievements('normal')
+        }}>
         </MainScreen>
     );
 };

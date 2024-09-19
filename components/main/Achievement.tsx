@@ -7,14 +7,15 @@ import { useTaskContext } from "@/hooks/configContext";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { TextWithIcons } from "./TextWithIcons";
 
-export default function Achievement({ info, index, type }: { info: any, index: number, type: 'normal' | 'restriction' }) {
+export default function Achievement({ info, index, type, callback }: { info: any, index: number, type: 'normal' | 'restriction', callback: Function }) {
     const [completed, onChangeCompleted] = React.useState(false);
     const { width: windowWidth } = useWindowDimensions();
     const lang = useTaskContext().lang;
 
-    const onChangeAchevementState = (complete: boolean): void => {
+    const onChangeAchievementState = (complete: boolean): void => {
         DataManager.instance.setAchievementCompletedState(index, type, complete);
         onChangeCompleted(complete);
+        callback();
     }
 
     useEffect(() => {
@@ -58,7 +59,7 @@ export default function Achievement({ info, index, type }: { info: any, index: n
                                 isChecked={completed}
                                 onPress={
                                     (isChecked: boolean) => {
-                                        onChangeAchevementState(isChecked);
+                                        onChangeAchievementState(isChecked);
                                     }}
                             />
                         </View>
