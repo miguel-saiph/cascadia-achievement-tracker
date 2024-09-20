@@ -1,4 +1,12 @@
 {
+    "base": {
+        "en": "Base",
+        "es": "Base"
+    },
+    "expansion_1": {
+        "en": "Landmarks",
+        "es": "Hitos"
+    },
     "info_title": {
         "en": "General Rules",
         "es": "Reglas Generales",

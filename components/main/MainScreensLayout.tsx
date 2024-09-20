@@ -1,16 +1,30 @@
-import { StyleSheet, Image, Platform, SafeAreaView, ImageBackground, View, Animated } from 'react-native';
+import { StyleSheet, Image, Platform, SafeAreaView, ImageBackground, View, Animated, ImageSourcePropType } from 'react-native';
 import { Info } from './Info';
 import { AchievementsCount } from './AchievementsCount';
+import { ExpansionButton } from './ExpansionButton';
+import { useState } from 'react';
+import { useTaskContext } from '@/hooks/configContext';
 
 interface IAchievementsCount {
     current: number,
     total: number
 }
 
-export default function MainScreen({ children, data }: {children: any, data: IAchievementsCount}) {
+interface IBackgroundSourceMap {
+    [expansion: string]: ImageSourcePropType
+}
+
+const backgroundSourceMap: IBackgroundSourceMap = {
+    ['base']: require("@/assets/images/background_1.jpg"),
+    ['landmarks']: require("@/assets/images/background_2.jpg")
+}
+
+export default function MainScreen({ children, data }: { children: any, data: IAchievementsCount }) {
+    const mode = useTaskContext().mode;
+
     return (
         <SafeAreaView style={styles.container}>
-            <ImageBackground source={require('@/assets/images/background.jpg')} style={{
+            <ImageBackground source={backgroundSourceMap[mode]} style={{
                 width: '100%',
                 height: '100%',
                 justifyContent: "center",
@@ -20,7 +34,8 @@ export default function MainScreen({ children, data }: {children: any, data: IAc
 
                 <View style={{ height: 80 }} />
                 <View style={styles.topBarContainer}>
-                    <Info />
+                    {/* <Info /> */}
+                    <ExpansionButton />
                     <AchievementsCount current={data.current} total={data.total} />
                 </View>
 

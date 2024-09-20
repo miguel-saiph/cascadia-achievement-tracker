@@ -11,6 +11,7 @@ export default function Achievement({ info, index, type, callback }: { info: any
     const [completed, onChangeCompleted] = React.useState(false);
     const { width: windowWidth } = useWindowDimensions();
     const lang = useTaskContext().lang;
+    const mode = useTaskContext().mode;
 
     const onChangeAchievementState = (complete: boolean): void => {
         DataManager.instance.setAchievementCompletedState(index, type, complete);
@@ -20,7 +21,7 @@ export default function Achievement({ info, index, type, callback }: { info: any
 
     useEffect(() => {
         onChangeCompleted(DataManager.instance.getAchievementState(index, type));
-    }, []);
+    }, [mode]);
 
     return (
         <View style={

@@ -12,6 +12,7 @@ import externalData from '@/data/AchievementsData.json';
 import DataManager from '@/data/DataManager';
 import Achievement from '@/components/main/Achievement';
 import MainScreen from '@/components/main/MainScreensLayout';
+import { useTaskContext } from '@/hooks/configContext';
 
 const data: any = externalData;
 
@@ -23,13 +24,12 @@ export default function Restrictions({ navigation }: any) {
     const refScrollView = useRef(null);
     const { width: windowWidth } = useWindowDimensions();
     const [fadeAnim] = useState(new Animated.Value(1));
-    const [currentMode, setCurrentMode] = useState('base');
+    const mode = useTaskContext().mode;
     const [currentCompletedAchievements, setCurrentCompletedAchievements] = useState(0);
 
     useEffect(() => {
-        setCurrentMode(DataManager.instance.getCurrentMode());
         updateCurrentAchievementsCount();
-    }, []);
+    }, [mode]);
 
     const updateCurrentAchievementsCount = () => {
         setCurrentCompletedAchievements(DataManager.instance.getCompletedAchievementsCount('restriction'));
@@ -68,7 +68,7 @@ export default function Restrictions({ navigation }: any) {
                             }
                         }>
 
-                        {(data[currentMode].restrictions).map((text:string, index: number) => {
+                        {(data[mode].restrictions).map((text:string, index: number) => {
                             return (
                                 <View key={index}>
                                     <Achievement info={text} index={index} type={'restriction'} callback={updateCurrentAchievementsCount} />

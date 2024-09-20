@@ -1,5 +1,5 @@
 import Card from '@/components/main/Card';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
     SafeAreaView,
     ScrollView,
@@ -21,6 +21,7 @@ import { Info } from '@/components/main/Info';
 import { AchievementsCount } from '@/components/main/AchievementsCount';
 import { ScenarioNumber } from '@/components/main/ScenarioNumber';
 import MainScreen from '@/components/main/MainScreensLayout';
+import { useTaskContext } from '@/hooks/configContext';
 
 export interface IScenario {
     cards: string[],
@@ -41,10 +42,16 @@ export default function Scenarios({ navigation }: any) {
     const { width: windowWidth } = useWindowDimensions();
     const [fadeAnim] = useState(new Animated.Value(1));
     const [currentCompletedScenarios, setCurrentCompletedScenarios] = useState(0);
-    const [currentMode, setCurrentMode] = useState('base');
+    const mode = useTaskContext().mode;
+    const [config] = useState(useTaskContext());
+
+    useMemo(() => {
+        // First loading of config parameters
+        config.setLang(DataManager.instance.getCurrentLang());
+        config.setMode(DataManager.instance.getCurrentMode());
+    }, []);
 
     useEffect(() => {
-        setCurrentMode(DataManager.instance.getCurrentMode());
         updateCurrentScenariosCount();
         setTimeout(() => {
             Animated.timing(fadeAnim, {
@@ -91,7 +98,7 @@ export default function Scenarios({ navigation }: any) {
                         })
                     }
                     scrollEventThrottle={1}>
-                    {data[currentMode].scenarios.map((scenario: IScenario, index: number) => {
+                    {data[mode].scenarios.map((scenario: IScenario, index: number) => {
                         return (
                             <View
                                 style={{
@@ -104,7 +111,7 @@ export default function Scenarios({ navigation }: any) {
                                     event => {
                                         const layout = event.nativeEvent.layout;
                                         xCoords[index] = layout.x;
-                                        if (index >= data[currentMode].scenarios.length - 1) {
+                                        if (index >= data[mode].scenarios.length - 1) {
                                             setLoaded(true);
                                         }
                                     }

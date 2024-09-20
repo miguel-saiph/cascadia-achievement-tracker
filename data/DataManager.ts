@@ -12,7 +12,7 @@ export interface IStorageData {
         }
     }
     // scenarios: IAchievementData[];
-    currentMode: 'base' | 'landmarks';
+    currentMode: string;
     currentLang: string;
 }
 
@@ -185,7 +185,7 @@ export default class DataManager {
         
     }
 
-    public setCurrentMode(mode: 'base' | 'landmarks'): void {
+    public setCurrentMode(mode: string): void {
         this.storageData.currentMode = mode;
         this.saveData(this.storageData);
     }

@@ -39,11 +39,6 @@ export function Info() {
             </TouchableOpacity>
             <CustomModal modalVisible={modalVisible} width={'90%'} height={'95%'} onRequestClose={setModalVisible} children={
                 <View style={{flex: 1}}>
-                    <ThemedText adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.modalText, styles.title]}>{texts.info_title[lang]} </ThemedText>
-                    <ThemedText adjustsFontSizeToFit={true} numberOfLines={2} style={styles.modalText}> {texts.info_p1[lang]} </ThemedText>
-                    <ThemedText adjustsFontSizeToFit={true} numberOfLines={2} style={styles.modalText}>{'\u2022'} {texts.info_p2[lang]} </ThemedText>
-                    <ThemedText adjustsFontSizeToFit={true} numberOfLines={1} style={styles.modalText}>{'\u2022'} {texts.info_p3[lang]}</ThemedText>
-                    <ThemedText adjustsFontSizeToFit={true} numberOfLines={2} style={styles.modalText}>{'\u2022'} {texts.info_p4[lang]} </ThemedText>
                     <View style={{ alignItems: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Image source={require('@/assets/images/medals/bronze-medal.png')} style={styles.medalIcon} />

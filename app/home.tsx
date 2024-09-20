@@ -6,7 +6,6 @@ import { StatusBar } from "expo-status-bar";
 import { useTaskContext } from "@/hooks/configContext";
 
 export default function HomeScreen({ navigation }: any) {
-    const [config] = useState(useTaskContext());
     let isNavigating: boolean = false;
 
     useEffect(() => {
@@ -23,8 +22,6 @@ export default function HomeScreen({ navigation }: any) {
         if (isNavigating) {
             return;
         }
-        console.log('current lang: ', DataManager.instance.getCurrentLang())
-        config.setLang(DataManager.instance.getCurrentLang());
         setTimeout(() => {
             navigation.navigate('(tabs)', { name: 'TabLayout' })
         }, 500)

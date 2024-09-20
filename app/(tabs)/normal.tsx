@@ -29,11 +29,10 @@ export default function NormalGame({ navigation }: any) {
     const [fadeAnim] = useState(new Animated.Value(1));
     const lang = useTaskContext().lang;
     const texts: ILoc = localization;
-    const [currentMode, setCurrentMode] = useState('base');
+    const mode = useTaskContext().mode;
     const [currentCompletedAchievements, setCurrentCompletedAchievements] = useState(0);
 
     useEffect(() => {
-        setCurrentMode(DataManager.instance.getCurrentMode());
         updateCurrentAchievementsCount();
         setTimeout(() => {
             Animated.timing(fadeAnim, {
@@ -46,7 +45,7 @@ export default function NormalGame({ navigation }: any) {
                 }
             })
         }, 200);
-    }, [loaded, refScrollView]);
+    }, [loaded, refScrollView, mode]);
 
     const handleScroll = (event: any) => {
     };
@@ -88,7 +87,7 @@ export default function NormalGame({ navigation }: any) {
                             }
                         }>
 
-                        {data[currentMode].normal_achievements.map((text: string, index: number) => {
+                        {data[mode].normal_achievements.map((text: string, index: number) => {
                             return (
                                 <View key={index}>
                                     <Achievement info={text} index={index} type={'normal'} callback={updateCurrentAchievementsCount} />

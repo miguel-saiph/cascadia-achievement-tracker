@@ -32,20 +32,13 @@ export default function Index() {
     }
 
     return (
-        <ConfigProvider>
-            <Stack.Navigator>
-                <Stack.Screen
-                    name="Home"
-                    component={HomeScreen}
-                    options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                    name="Scenarios"
-                    component={Scenarios}
-                    options={{ headerShown: false }}
-                />
-            </Stack.Navigator> 
-        </ConfigProvider>
+        <Stack.Navigator>
+            <Stack.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{ headerShown: false }}
+            />
+        </Stack.Navigator>
 
     );
 }
